@@ -59,7 +59,7 @@ Verification and validation (V&V) are essential activities in product developmen
 ### Pre-Reading Materials
 
 - **Concept Briefs**:
-  - Verification and Validation: An Overview
+  - [Verification and Validation: Concept Overview and Terminologies](/v-and-v-concept-overview-and-terminologies)
   - Intro to Supervised Machine Learning
   - Machine Learning Verification: Notation and Definitions
 - [NASA Systems Engineering Handbook](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf), Chapter 5.3 and 5.4 **[Optional, highly recommended]**
@@ -79,3 +79,8 @@ You may use AI tools to assist your learning process. Please be aware of respons
 
 [Copilot](https://copilot.github.com) has been used to generate text for this course website, but the final content has been reviewed and edited by the instructor. 
 <!-- Copilot is an AI tool developed by [GitHub](https://github.com) and [OpenAI](https://openai.com) to help developers write code and text. Copilot has been trained on a variety of sources, including publicly available data, code, and text. If you have any concerns, please let me know. -->
+
+
+
+# Course Briefs
+

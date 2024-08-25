@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Verification and Validation for AI Products</title>
+
+  
+  <meta name="author" content="Mansur M. Arief">
+  
+
+  <meta name="description" content="## Verification and Validation (V&amp;V): Concept Overview and Terminologies *Verification and validation (V&amp;V)* are essential activities in *product development*. It is a systematic process to ensure that the product meets the *technical specifications* as well as *user requirements*. In the...">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Verification and Validation for AI Products" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Verification and Validation for AI Products">
+  <meta property="og:title" content="Verification and Validation for AI Products">
+  <meta property="og:description" content="## Verification and Validation (V&amp;V): Concept Overview and Terminologies *Verification and validation (V&amp;V)* are essential activities in *product development*. It is a systematic process to ensure that the product meets the *technical specifications* as well as *user requirements*. In the...">
+
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/v-and-v-concept-overview-and-terminologies/">
+  <link rel="canonical" href="http://localhost:4000/v-and-v-concept-overview-and-terminologies/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Verification and Validation for AI Products">
+  <meta property="twitter:description" content="## Verification and Validation (V&amp;V): Concept Overview and Terminologies *Verification and validation (V&amp;V)* are essential activities in *product development*. It is a systematic process to ensure that the product meets the *technical specifications* as well as *user requirements*. In the...">
+
+  
+
+  
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "headline": "Verification and Validation for AI Products",
+        "description": "## Verification and Validation (V&amp;V): Concept Overview and Terminologies *Verification and validation (V&amp;V)* are essential activities in *product development*. It is a systematic process to ensure that the product meets the *technical specifications* as well as *user requirements*. In the...",
+        "image": "http://localhost:4000/",
+        "url": "http://localhost:4000/v-and-v-concept-overview-and-terminologies/"
+      }
+      </script>
+
+  
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true},
+        jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+        extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+        TeX: {
+        extensions: ["cancel.js", "AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+        equationNumbers: {
+        autoNumber: "AMS"
+        }
+      }
+    });
+  </script>
+
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Verification and Validation for AI Products</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto"></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class=" container-md " role="main">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <h2 id="verification-and-validation-vv-concept-overview-and-terminologies">Verification and Validation (V&amp;V): Concept Overview and Terminologies</h2>
+
+<p><em>Verification and validation (V&amp;V)</em> are essential activities in <em>product development</em>. It is a systematic process to ensure that the product meets the <em>technical specifications</em> as well as <em>user requirements</em>. In the overall product development process, <em>V&amp;V activities</em> are often carried out in later stages, after the first <em>prototypes</em> or <em>conceptual designs</em> have been realized. V&amp;V ensures that the product is built correctly  and that the right product is built to meet the user needs.</p>
+
+<p><img src="/assets/img/systems-engineering-engine-with-v-and-v-highlighted.png" alt="Systems Engineering Engine with V&amp;V Highlighted" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 1</strong> Systems Engineering Engine with V&amp;V Highlighted. <a href="https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf">Source: NASA Systems Engineering Handbook, Section 2.1.</a></span></p>
+
+<p>The output of V&amp;V activities is often used to inform design decisions, assess the <em>technological readiness level (TRL)</em> of the product for deployment under different <em>operational domains</em>, and <em>manage risks</em> associated with the product. V&amp;V activities can include <em>analysis</em>, <em>testing</em>, <em>inspection</em>, and <em>demonstration</em>, depending on the nature of the product and the requirements.</p>
+
+<p>V&amp;V is particularly important in the development of complex systems, where the interactions between different components can lead to unexpected behaviors or failure modes. In aerospace, automotive, medical devices, and other safety-critical industries, V&amp;V is a standard practice to ensure the safety, reliability, and performance of the products. The success of aviation in maintaining high safety standards is often attributed to the rigorous <em>V&amp;V standards</em> and processes followed in the development of aircraft and avionics systems (leading to, for instance, extremely low <em>failure rates</em> in commercial aviation, about 1 case in 100 million flights).</p>
+
+<p><img src="/assets/img/ai-products-example.png" alt="AI Products Example" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 2</strong> Example of AI Products across Different Domains.</span></p>
+
+<p>In the context of <em>AI products</em>, especially those that involve <em>machine learning (ML) models</em>, V&amp;V becomes even more critical. ML models are complex, <em>black-box</em>, non-linear systems that can exhibit unexpected behaviors under different input conditions. V&amp;V helps to identify potential failure modes of ML models, verify their input-output specifications, and validate their performance against user requirements. It also helps to guide the deployment of ML models in real-world applications, define the operational domains under which they can be expected to perform, and manage the risks associated with their use.</p>
+
+<h3 id="terminologies">Terminologies</h3>
+
+<ul>
+  <li>
+    <p><em>AI products</em>: Products that incorporate artificial intelligence (AI) technologies, such as ML models, to provide intelligent capabilities. AI products are used in a wide range of applications, from recommendation systems to autonomous robots to medical diagnostics. V&amp;V of AI products is essential to ensure that they are safe, reliable, and perform as intended.</p>
+  </li>
+  <li>
+    <p><em>Analysis</em>: In the context of V&amp;V activities, analysis involves using mathematical calculations or simulations to verify that a requirement is met. It is used when physical testing is not feasible or is too expensive. The analysis uses input parameters that are as accurate as possible based on the physical reality of the system.</p>
+  </li>
+  <li>
+    <p><em>Black-box</em>: A term used to describe systems or models where the internal workings are not transparent or easily understood. ML models are often considered black-box systems because the relationships between inputs and outputs are complex and not easily interpretable by humans.</p>
+  </li>
+  <li>
+    <p><em>Conceptual design</em>: The initial design concepts and ideas for a product. Conceptual designs are often developed based on user requirements and technical specifications and serve as the starting point for the detailed design and development process.</p>
+  </li>
+  <li>
+    <p><em>Demonstration (or demo)</em>: In the context of V&amp;V activities, demonstration involves operating the system to show that it performs its intended functions. It typically does not involve extensive instrumentation or data collection. Demonstration is about showing that the system works as intended without necessarily measuring specific performance parameters.</p>
+  </li>
+  <li>
+    <p><em>Failure modes</em>: The ways in which a system can fail to meet its requirements or specifications. Failure modes can be caused by design flaws, manufacturing defects, or operational errors. Identifying failure modes is an important part of V&amp;V activities to ensure that the product is safe, reliable, and performs as intended.</p>
+  </li>
+  <li>
+    <p><em>Failure rates</em>: The frequency at which a system or component fails to meet its requirements or specifications under natural or operational conditions. Failure rates are often expressed as the number of failures per unit of time or usage. Low failure rates are desirable in safety-critical systems to ensure the safety and reliability of the product.</p>
+  </li>
+  <li>
+    <p><em>Inspection</em>: In the context of V&amp;V activities, inspection is a physical examination of the artifact or system, often done visually or using non-destructive inspection techniques (like X-rays or eddy current sensors). Inspection is used to verify requirements without operating the system, such as checking for manufacturing flaws or verifying physical dimensions.</p>
+  </li>
+  <li>
+    <p><em>ML models</em>: Machine learning models are computational models that learn patterns from data and make predictions or decisions based on those patterns. ML models are used in a wide range of applications, from image recognition to natural language processing to autonomous driving.</p>
+  </li>
+  <li>
+    <p><em>Operational (design) domain</em>: The range of conditions under which the product is expected to operate. Operational domains define the environmental, operational, and performance requirements that the product must meet to be expected to perform as intended.</p>
+  </li>
+  <li>
+    <p><em>Product Development</em>: In systems engineering, product development is a process that involves the design, development, testing, and deployment of a product or system. It often follows a structured approach (such as the V-model or the waterfall model) to ensure that the product meets the requirements and specifications.</p>
+  </li>
+  <li>
+    <p><em>Prototype</em>: A preliminary version of a product that is used to test and validate the design concepts. Prototypes are often developed early in the product development process to gather feedback and refine the design before full-scale production.</p>
+  </li>
+  <li>
+    <p><em>Risk</em>: In the context of product development, risk often refers to the likelihood of failure or the impact of failure on the product’s performance or safety. Risks can be technical, operational, or business-related and must be managed throughout the product development process.</p>
+  </li>
+  <li><em>Risk management</em>: The process of identifying, assessing, and mitigating risks associated with the product development process. It is important for both users and product developers:
+    <ul>
+      <li><strong>For users</strong>: ensures that the product is safe, reliable, and meets the intended requirements.</li>
+      <li><strong>For developers</strong>: helps identify potential failure modes, assessing the likelihood and impact, and take steps to mitigate or eliminate them.</li>
+    </ul>
+  </li>
+  <li>
+    <p><em>Systems engineering</em>: An interdisciplinary approach to designing, developing, and managing complex systems over their life cycles. Systems engineering considers both the technical and business aspects of a product or system and aims to optimize the overall system performance, cost, and schedule.</p>
+  </li>
+  <li>
+    <p><em>Technical specifications</em>: The detailed specifications that define how the product should be built. Technical specifications include design specifications, performance requirements, and other technical details that guide the development process. This is often defined by the product developers or engineers and used as a reference for the V&amp;V activities.</p>
+  </li>
+  <li>
+    <p><em>Technological readiness level (TRL)</em>: A scale used to assess the maturity of a technology or product. TRL levels range from 1 (basic principles observed) to 9 (fully operational in operational environments). TRL assessments help to track the progress of a technology or product through the development process.
+<img src="/assets/img/trl-nasa-se-handbook.png" alt="NASA TRL Scale" style="width: 100%; max-width: 500px; margin: 20px auto; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 3</strong> Technology Readiness Level (TRL) Scale. Source: NASA Systems Engineering Handbook.</span></p>
+  </li>
+  <li>
+    <p><em>Testing</em>: In the context of V&amp;V activities, testing involves applying specific stimuli to the system, operating it under controlled conditions, recording data, and then analyzing that data to compare actual performance against predicted or required performance. It is often the most thorough form of verification but can also be the most resource-intensive.</p>
+  </li>
+  <li>
+    <p><em>User requirements</em>: The needs and expectations of the users or stakeholders of the product. User requirements are often captured in a requirements document or a user story and serve as the basis for the product design and development.</p>
+  </li>
+  <li>
+    <p><em>V&amp;V</em>: The combined process of verification and validation.</p>
+  </li>
+  <li>
+    <p><em>V&amp;V Activities</em>: The specific tasks and activities carried out for V&amp;V purposes. These activities include analysis, testing, inspection, and demonstration.</p>
+  </li>
+  <li>
+    <p><em>V&amp;V Standards</em>: The guidelines and best practices for carrying out V&amp;V activities. These standards provide a framework for ensuring that V&amp;V activities are carried out effectively and efficiently. They often include specific processes, methods, and tools for V&amp;V. Examples of V&amp;V standards include <a href="https://www.iso.org/standard/81291.html">ISO/IEC/IEEE 29119</a>, <a href="https://apps.dtic.mil/sti/tr/pdf/ADA558107.pdf">DO-178C</a>, or <a href="https://www.iso.org/standard/68383.html">ISO 26262</a>.</p>
+  </li>
+  <li>
+    <p><em>Validation</em>: The process of determining whether the right product is built. It ensures if the product meets the user requirements, solves the intended problem based on the user use cases, and provides the expected benefits to the users. Often times, validation involves user testing, feedback collection, and user acceptance criteria.</p>
+  </li>
+  <li><em>Verification</em>: The process of determining whether the product is built correctly. It ensures if the product performs as intended, free from errors (or bugs, if involving software), and complies with the technical specifications defined by the developers.</li>
+</ul>
+
+<h3 id="acknowledgment">Acknowledgment</h3>
+
+<p>This lecture material is adapted from the <a href="https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf">NASA Systems Engineering Handbook</a>, Chapter 5.3 and 5.4. The figures are created by the author using materials from various sources. The terminologies are compiled from various online resources and textbooks on systems engineering, V&amp;V, and machine learning. The author acknowledges the contributions of the original authors and sources in compiling this material.</p>
+
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the author. The author has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.</p>
+
+<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://www.mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the author directly.</p>
+
+<p><span style="font-size:small"><strong>Content available online at <a href="https://vandvaiproducts.github.io/v-and-v-concept-overview-and-terminologies">VandVAIProducts.github.io/v-and-v-concept-overview-and-terminologies</a></strong>.</span></p>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Mansur M. Arief
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">VandVAIProducts.github.io</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <!-- <a href="https://beautifuljekyll.com">Beautiful Jekyll</a> -->
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+  
+    <script src="/assets/js/collapse.js"></script>
+  
+
+
+
+
+
+
+
+</body>
+</html>
