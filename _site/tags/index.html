@@ -12,7 +12,7 @@
   <title>Tag Index</title>
 
   
-  <meta name="author" content="Mansur M. Arief">
+  <meta name="author" content="Mansur Arief">
   
 
   <meta name="description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list...">
@@ -156,7 +156,13 @@
   </button>
 
   <div class="collapse navbar-collapse" id="main-navbar">
-    <ul class="navbar-nav ml-auto"></ul>
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Main Lecture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/v-and-v-concept-overview-and-terminologies">Terminologies</a>
+          </li></ul>
   </div>
 
   
@@ -223,7 +229,7 @@
       
       <p class="copyright text-muted">
       
-        Mansur M. Arief
+        Mansur Arief
         &nbsp;&bull;&nbsp;
       
       2024
