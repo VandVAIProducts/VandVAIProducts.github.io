@@ -16,7 +16,7 @@ author: Mansur M. Arief
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Home: "index"
+  # Home: "index"
   # Submission: "submission"
   # Competition: "competition"
   # Programs: "programs"
@@ -230,7 +230,7 @@ exclude:
   - docs/
 
 plugins:
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
 
