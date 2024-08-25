@@ -1,0 +1,16 @@
+<div class="slide-container">
+    <div id="{{ include.id }}"></div>
+
+    <embed class="slide" src="/assets/slides/{{ include.name }}#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0" type="application/pdf">
+
+    <div class="slide-notes">
+        {{ include.notes | markdownify }}
+    </div>
+</div>
+<a name="{{ include.id }}"></a>
+
+
+
+
+
+

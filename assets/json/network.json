@@ -1,0 +1,61 @@
+{
+    "nodes": {
+        "East Timor": {
+            "color": "#000000",
+            "weight": 1
+
+        },        
+        "Brunei": {
+            "color": "#000000",
+            "weight": 1
+        },
+        "Indonesia": {
+            "color": "red",
+            "weight": 5
+        },        
+        "Malaysia": {
+            "color": "#000000",
+            "weight": 1
+        },        
+        "Thailand": {
+            "color": "#000000",
+            "weight": 1
+        }
+    },
+    "edges": {
+        "East Timor": {
+            "Indonesia": {
+                "weight": 1
+            }
+        },        
+        "Brunei": {
+            "Malaysia": {
+                "weight": 1
+            }
+        },
+        "Indonesia": {
+            "East Timor": {
+                "weight": 1
+            },
+            "Malaysia": {
+                "weight": 500
+            }
+        },        
+        "Malaysia": {
+            "Brunei": {
+                "weight": 1
+            },
+            "Indonesia": {
+                "weight": 1
+            },
+            "Thailand": {
+                "weight": 1
+            }
+        },        
+        "Thailand": {
+            "Malaysia": {
+                "weight": 1
+            }
+        }
+    }
+}

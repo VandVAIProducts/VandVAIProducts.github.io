@@ -1,0 +1,30 @@
+<div class="quiz-accordion" id="accordion{{ include.id }}">
+    <div class="card">
+        <div class="card-header" id="q{{ include.id }}">
+          <span class="mb-0">            
+            Q{{ include.id }}. {{ include.question }}            
+          </span>
+        </div>        
+    </div>
+    {% for option in include.options %}        
+    <div class="card">
+        <div class="card-header reduced-padding no-bg" id="header-q{{ include.id }}-opt{{ forloop.index }}">
+          <span class="mb-0">        
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-q{{ include.id }}-opt{{ forloop.index }}" aria-expanded="true" aria-controls="collapse-q{{ include.id }}-opt{{ forloop.index }}">
+                {{ option.text }}            
+            </button>                
+          </span>
+        </div>
+        <div id="collapse-q{{ include.id }}-opt{{ forloop.index }}" class="collapse" aria-labelledby="header-q{{ include.id }}-opt{{ forloop.index }}" data-parent="#accordion{{ include.id }}">
+          <div class="card-body reduced-padding padding-body-card">
+            {% if option.note != "" %}
+                <span class="badge badge-success">{{ option.note }}</span>
+            {% else %}
+            <span class="badge badge-danger">Not quite</span>
+            {% endif %}
+          </div>
+        </div>
+    </div>
+    {% endfor %}    
+</div>
+

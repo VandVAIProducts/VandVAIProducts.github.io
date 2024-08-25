@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Verification and Validation for AI Products</title>
+
+  
+  <meta name="author" content="Mansur M. Arief">
+  
+
+  <meta name="description" content="### Session X: Verification and Validation (V&amp;V) for Machine Learning (ML) Models Verification and validation (V&amp;V) are essential activities in product development. V&amp;V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process...">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Verification and Validation for AI Products" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Verification and Validation for AI Products">
+  <meta property="og:title" content="Verification and Validation for AI Products">
+  <meta property="og:description" content="### Session X: Verification and Validation (V&amp;V) for Machine Learning (ML) Models Verification and validation (V&amp;V) are essential activities in product development. V&amp;V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process...">
+
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Verification and Validation for AI Products">
+  <meta property="twitter:description" content="### Session X: Verification and Validation (V&amp;V) for Machine Learning (ML) Models Verification and validation (V&amp;V) are essential activities in product development. V&amp;V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process...">
+
+  
+
+  
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "headline": "Verification and Validation for AI Products",
+        "description": "### Session X: Verification and Validation (V&amp;V) for Machine Learning (ML) Models Verification and validation (V&amp;V) are essential activities in product development. V&amp;V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process...",
+        "image": "http://localhost:4000/",
+        "url": "http://localhost:4000/"
+      }
+      </script>
+
+  
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true},
+        jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+        extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+        TeX: {
+        extensions: ["cancel.js", "AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+        equationNumbers: {
+        autoNumber: "AMS"
+        }
+      }
+    });
+  </script>
+
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Verification and Validation for AI Products</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Home</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class=" container-md " role="main">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <!-- ## Course: Verification and Validation (V&V) for AI Products -->
+
+<h3 id="session-x-verification-and-validation-vv-for-machine-learning-ml-models">Session X: Verification and Validation (V&amp;V) for Machine Learning (ML) Models</h3>
+
+<!-- **Abstract:** Verification and validation (V&V) are essential activities in product development. V&V ensures that the product meets the technical specifications as well as user requirements. Verification is the process of determining whether the product is built correctly, while validation is the process of determining whether the right product is built. In this session, we will review V&V definitions, scope differences, activities, and standards. We will discuss the importance of V&V as a critical step in product development process, especially for AI products that often consists of machine learning (ML) models. We will also highlight how V&V frameworks can help in risk management and technology readiness assessment. If time permits, we will discuss V&V techniques to verify input-output specification and find failure modes for ML models through class activities. Students are expected to participate actively in discussions and class activities. Pre-reading materials are available both in the course website and attached. By the end of this session, students will be able to identify V&V task, argue their critical importance as part of product development process, describe methods and activities to carry out V&V in practice, and give examples of falsification techniques to find failures for ML models. -->
+
+<p>Verification and validation (V&amp;V) are essential activities in product development. V&amp;V ensures that the product meets the technical specifications as well as user requirements. <em>Verification</em> is the process of determining whether the product is built correctly, while <em>validation</em> is the process of determining whether the right product is built. In this session,</p>
+
+<ul>
+  <li>we will review V&amp;V definitions, scope differences, activities, and standards;</li>
+  <li>we will discuss the importance of V&amp;V as a critical step in product development process, especially for AI products that often consists of machine learning (ML) models;</li>
+  <li>we will also highlight how V&amp;V frameworks can help in risk management and technology readiness assessment;</li>
+  <li>time permitting, we will discuss V&amp;V techniques to verify input-output specification and find failure modes of ML models through class activities.</li>
+</ul>
+
+<h3 id="schedule">Schedule</h3>
+
+<ul>
+  <li><strong>Duration</strong>: 45 minutes lectures and in-class activities + 15 minutes Q&amp;A</li>
+  <li><strong>Date</strong>: 2024-09-05</li>
+  <li><strong>Time</strong>: 10:00 - 11:00 AM SST (Singapore Standard Time, UTC+8)</li>
+  <li><strong>Location</strong>: Teams Meeting (Link will be shared via email)</li>
+</ul>
+
+<h3 id="instructor">Instructor</h3>
+
+<ul>
+  <li><strong>Name</strong>: Mansur M. Arief, PhD.</li>
+  <li><strong>Affiliation</strong>: Postdoctoral Scholar, Stanford Intelligent Systems Laboratory (<a href="https://sisl.stanford.edu">SISL</a>)</li>
+  <li><strong>Institution</strong>: Stanford University</li>
+  <li><strong>Email</strong>: <a href="mailto:mansur.arief@stanford.edu">mansur.arief@stanford.edu</a></li>
+  <li><strong>Website</strong>: <a href="https://www.mansurarief.github.io">mansurarief.github.io</a></li>
+</ul>
+
+<h3 id="learning-objectives">Learning Objectives</h3>
+
+<ul>
+  <li>Students can identify V&amp;V tasks in product developments, especially for AI products.</li>
+  <li>Students can describe the importance of V&amp;V in product development process.</li>
+  <li>Students can illustrate V&amp;V methods and activities and describe their outcomes.</li>
+  <li>Students can give examples of falsification techniques to find failures of ML models.</li>
+</ul>
+
+<h3 id="tools">Tools</h3>
+
+<ul>
+  <li><strong>Microsoft Teams</strong>: Please make sure you have installed Teams on your computer or mobile device or use the web version.</li>
+  <li><strong>Google Slides</strong>: Mainly for presentation by the instructor.</li>
+  <li><strong>Poll Everywhere</strong>: For interactive quizzes and polls. You can use your smartphone or computer to participate and no account is required.</li>
+  <li><strong>Google Collaboratory</strong>: For class activity on ML model V&amp;V. You will need a Google account to access the notebook.</li>
+</ul>
+
+<!-- ### Agenda
+
+- Introduction to Verification and Validation (V&V)
+- V&V Activities and  Standards
+- Importance of V&V for Product Development
+- V&V for Machine Learning (ML) Products
+- ML Model Verification and Validation *[Optional, if time permits]*
+- Summary and Q&A -->
+
+<h3 id="pre-reading-materials">Pre-Reading Materials</h3>
+
+<ul>
+  <li><strong>Concept Briefs</strong>:
+    <ul>
+      <li>Verification and Validation: An Overview</li>
+      <li>Intro to Supervised Machine Learning</li>
+      <li>Machine Learning Verification: Notation and Definitions</li>
+    </ul>
+  </li>
+  <li><a href="https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf">NASA Systems Engineering Handbook</a>, Chapter 5.3 and 5.4 <strong>[Optional, highly recommended]</strong></li>
+  <li><a href="https://theory.stanford.edu/~barrett/pubs/LAL+21.pdf">Algorithms for Verifying Deep Neural Nets (Changliu Liu, et al., 2021)</a> <strong>[Optional]</strong></li>
+</ul>
+
+<h3 id="accommodations">Accommodations</h3>
+
+<ul>
+  <li>Students are expected to participate actively in discussions and class activities. If you have any special needs, please let me know in advance so that I can make necessary accommodations.</li>
+  <li>For optimal learning experience, please make sure you have a stable internet connection, a quiet place to participate in the class, laptop or desktop computer, and a working microphone and camera.</li>
+  <li>If English is not your first language and you need additional support, please let me know in advance so that I can adjust my speaking pace and provide additional explanations when needed.</li>
+</ul>
+
+<h3 id="ai-usage-policy">AI Usage Policy</h3>
+
+<p>You may use AI tools to assist your learning process. Please be aware of responsible and ethical use of these tools. Never use them to cheat and do not share any private information when using them, especially those that are not of yours.  Please also be aware of the university’s stance on <a href="https://www.ntu.edu.sg/education/inspire/teaching-learning-assessment-with-genai">generative AI usage in classrooms</a> and <a href="https://www.ntu.edu.sg/wkwsci/admissions/useful-links/undergraduate/academic-integrity">policy on academic integrity and plagiarism</a>. If you have any questions about this policy, please consult the official guidelines or ask the instructor.</p>
+
+<h3 id="acknowledgement">Acknowledgement</h3>
+
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate text for this course website, but the final content has been reviewed and edited by the instructor. 
+<!-- Copilot is an AI tool developed by [GitHub](https://github.com) and [OpenAI](https://openai.com) to help developers write code and text. Copilot has been trained on a variety of sources, including publicly available data, code, and text. If you have any concerns, please let me know. --></p>
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Mansur M. Arief
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">VandVAIProducts.github.io</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+  
+    <script src="/assets/js/collapse.js"></script>
+  
+
+
+
+
+
+
+
+</body>
+</html>

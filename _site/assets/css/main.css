@@ -1,0 +1,400 @@
+@import url("pygment_highlights.css");
+
+/* --- General --- */
+
+body {
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+    font-size: 3.25rem !important;
+}
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.old_news {
+    margin-top:-16px;
+}
+
+.text-center {
+    text-align:center;
+}
+
+.img-128 {
+    width: 128px;
+    height: 128px;
+}
+  
+.img-200 {
+width: 200px;
+height: 200px;
+}
+
+.img-circle {
+    object-position: center; /* Center the image within the element */
+    border-radius: 50%;
+}
+  
+
+em {
+    color: #b90505;
+}
+
+
+.emphasis {
+    background-color: #fef1f1;
+    border-left: 4px solid #b90505;
+    display: block;
+    border-radius: 4px 8px 8px 4px;
+    -moz-border-radius: 4px 8px 8px 4px;
+    -webkit-border-radius: 4px 8px 8px 4px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 0.8em!important;
+    margin-top: 0.8em!important;
+    orphans: 3;
+}
+
+.slide-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    max-height: 64vh; /* Adjust as needed */
+    border: none;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .slide {
+        min-height: 64vh;
+    }
+}
+
+.slide-notes {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 0.6em;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .slide-container {
+        flex-direction: row;
+    }
+
+    .slide {
+        width: 80%;
+    }
+
+    .slide-notes {
+        width: 20%;
+        padding-left: 10px;
+        padding-top: 0;
+    }
+}
+
+
+
+#timeline {
+    position: relative;
+    display: table;
+}
+
+/* New container for timeline sections */
+.timeline-container {
+    position: relative;
+}
+
+
+#timeline div:after {
+    content: '';
+    width: 2px;
+    position: absolute;
+    top: .5rem;
+    bottom: 0rem;
+    left: 67px;
+    z-index: 1;
+    background: #969696
+}
+
+#timeline h3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    color: #969696;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: 400
+}
+
+#timeline section.year {
+    position: relative;
+    float: left
+}
+
+#timeline section.year:first-child section {
+    margin-top: -1.3em;
+    padding-bottom: 0px
+}
+
+#timeline section.year section {
+    position: relative;
+    padding-bottom: 1.25em;
+    margin-bottom: 2em;
+    top: -5px;
+    right: -8px
+}
+
+#timeline section.year section h4 {
+    position: absolute;
+    bottom: 0;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0 0 0 82px;
+    color: #969696
+}
+
+#timeline section.year section a {
+    color: #0d0d86
+}
+
+#timeline section.year section ul {
+    list-style-type: none;
+    padding: 0 0 0 75px;
+    margin: -1.35rem 0 1em;
+    max-width: 50rem
+}
+
+@media (min-width: 62em) {
+    #timeline section.year section ul {
+        padding:0 0 0 81px
+    }
+}
+
+#timeline section.year section ul:last-child {
+    margin-bottom: 0
+}
+
+#timeline section.year section ul:first-of-type:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #969696;
+    border: 1px solid #969696;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 55px;
+    top: 9px;
+    z-index: 2
+}
+
+#timeline section.year section ul li {
+    margin-left: 0rem
+}
+
+#timeline section.year section ul li:before {
+    content: '';
+    margin-left: -.25rem;
+    padding-right: .3rem
+}
+
+#timeline section.year section ul li:not(:first-child) {
+    margin-top: .5rem
+}
+
+#timeline section.year section ul a {
+    color: #0d0d86
+}
+
+
+.organizers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.organizer {
+    flex-basis: 30%; /* Adjust this percentage to control the width of each organizer's block */
+    margin-bottom: 10px; /* Spacing between rows */
+    margin-top: 10px; /* Spacing between rows */
+    font-size: 1em;
+}
+
+.organizer img.img-circle {
+    width: 120px; /* Control the size of the image */
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    margin-bottom: 5px; /* Spacing between image and text */
+}
+
+/* For phone screens */
+@media screen and (max-width: 600px) {
+    .organizer {
+        flex-basis: 50%; /* Each organizer takes full width */
+    }
+}
+
+
+.speakers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.speaker {
+    flex-basis: 30%; /* Adjust this percentage to control the width of each organizer's block */
+    /* margin-bottom: 10px; Spacing between rows */
+    margin-top: 10px; /* Spacing between rows */
+    font-size: 1em;
+}
+
+.speaker img.img-circle {
+    width: 150px; /* Control the size of the image */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    /* margin-bottom: 5px; Spacing between image and text */
+}
+
+@media screen and (max-width: 600px) {
+    .speaker {
+        flex-basis: 100%; /* Each organizer takes full width */
+    }
+}
+
+
+
+.panelists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.panelist {
+    flex-basis: 15%; /* Adjust this percentage to control the width of each organizer's block */
+    margin-bottom: 10px; /* Spacing between rows */
+    margin-top: 10px; /* Spacing between rows */
+    font-size: 1em;
+}
+
+.panelist img.img-circle {
+    width: 90px; /* Control the size of the image */
+    height: 90px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    margin-bottom: 5px; /* Spacing between image and text */
+}
+
+/* For phone screens */
+@media screen and (max-width: 600px) {
+    .panelist {
+        flex-basis: 30%; /* Each organizer takes full width */
+    }
+}
+
+
+
+.image-banner {
+    background-image: url('/assets/img/stanford_dawn.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    position: relative;
+    text-align: center;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust text color as needed */
+    font-size: 40px; /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+.image-banner a {
+    color: inherit; /* Ensures the link has the same color as the text */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+
+.two-columns {
+    column-count: 2;
+    column-gap: 0px;
+    /* list-style-type: none; Optional: Removes the default bullet points */
+    padding: 0; /* Optional: Removes default padding */
+}
+
+.two-columns li {
+    break-inside: avoid-column; /* Prevents list items from being split across columns */
+    margin-left: 2em; /* Optional: Removes default left margin */
+}
+
+
+.event-column {
+    width: 50%; 
+}
+
+.date-column {
+    width: 50%; 
+}
+
+.badge {
+    background-color: #b00;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.table {
+    width: 100%; 
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-left:-1rem;
+}
+
+.table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border: none; /* Remove all borders */
+}
+
+.table thead th {
+    border-top: 2px solid rgb(125, 125, 125); 
+    border-bottom: 1px solid rgb(125, 125, 125); 
+    text-align:center;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 2px solid rgb(125, 125, 125); /* Bottom border for last row */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Shading for odd rows */
+}
