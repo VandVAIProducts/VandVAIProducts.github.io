@@ -2,7 +2,10 @@
 layout: page
 # title: Verification and Validation (V&V): Concept Overview and Terminologies
 description: "This lecture provides an overview of Verification and Validation (V&V) concepts and terminologies. It covers the definitions of V&V, the scope differences between verification and validation, V&V activities, and standards. It also discusses the importance of V&V as a critical step in the product development process, especially for AI products that often consist of machine learning (ML) models."
+tags: [Verification, Validation, Product Development, AI Products, V&V Standards, V&V Activities, V&V Outcomes, ML Model Verification, ML Model Validation]
 ---
+
+<!-- ## Course: Verification and Validation (V&V) for AI Products -->
 
 ### Verification and Validation (V&V): Concept Overview and Terminologies
 
