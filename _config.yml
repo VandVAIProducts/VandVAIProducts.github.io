@@ -9,15 +9,15 @@
 title: Verification and Validation for AI Products
 
 # Your name to show in the footer
-author: Mansur M. Arief
+author: Mansur Arief
 
 
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  # Home: "index"
-  # Submission: "submission"
+  Main Lecture: "index"
+  Terminologies: "V&V Terminologies"
   # Competition: "competition"
   # Programs: "programs"
   # Organizers: "#organizers"

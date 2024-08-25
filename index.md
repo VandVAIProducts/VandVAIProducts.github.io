@@ -77,10 +77,5 @@ You may use AI tools to assist your learning process. Please be aware of respons
 
 ### Acknowledgement
 
-[Copilot](https://copilot.github.com) has been used to generate text for this course website, but the final content has been reviewed and edited by the instructor. 
+[Copilot](https://copilot.github.com) has been used to generate text for this course website, but the final content has been reviewed and edited by the instructor.
 <!-- Copilot is an AI tool developed by [GitHub](https://github.com) and [OpenAI](https://openai.com) to help developers write code and text. Copilot has been trained on a variety of sources, including publicly available data, code, and text. If you have any concerns, please let me know. -->
-
-
-
-# Course Briefs
-

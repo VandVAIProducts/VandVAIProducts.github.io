@@ -4,7 +4,7 @@ layout: page
 description: "This lecture provides an overview of Verification and Validation (V&V) concepts and terminologies. It covers the definitions of V&V, the scope differences between verification and validation, V&V activities, and standards. It also discusses the importance of V&V as a critical step in the product development process, especially for AI products that often consist of machine learning (ML) models."
 ---
 
-## Verification and Validation (V&V): Concept Overview and Terminologies
+### Verification and Validation (V&V): Concept Overview and Terminologies
 
 *Verification and validation (V&V)* are essential activities in *product development*. It is a systematic process to ensure that the product meets the *technical specifications* as well as *user requirements*. In the overall product development process, *V&V activities* are often carried out in later stages, after the first *prototypes* or *conceptual designs* have been realized. V&V ensures that the product is built correctly  and that the right product is built to meet the user needs.
 
