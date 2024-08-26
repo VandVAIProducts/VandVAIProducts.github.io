@@ -19,6 +19,7 @@ navbar-links:
   Main Lecture: "index"
   Terminologies: "v-and-v-concept-overview-and-terminologies"
   ML Intro: "intro-to-supervised-ml"
+  ML Verification: "ml-verification-example-and-adversarial-attack"
   # Programs: "programs"
   # Organizers: "#organizers"
   # Registration: "registration"

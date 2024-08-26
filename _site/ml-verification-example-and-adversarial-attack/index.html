@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Verification and Validation for AI Products</title>
+
+  
+  <meta name="author" content="Mansur Arief">
+  
+
+  <meta name="description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Verification and Validation for AI Products" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Verification and Validation for AI Products">
+  <meta property="og:title" content="Verification and Validation for AI Products">
+  <meta property="og:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/ml-verification-example-and-adversarial-attack/">
+  <link rel="canonical" href="http://localhost:4000/ml-verification-example-and-adversarial-attack/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Verification and Validation for AI Products">
+  <meta property="twitter:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+
+  
+
+  
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "headline": "Verification and Validation for AI Products",
+        "description": "### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...",
+        "image": "http://localhost:4000/",
+        "url": "http://localhost:4000/ml-verification-example-and-adversarial-attack/"
+      }
+      </script>
+
+  
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true},
+        jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+        extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+        TeX: {
+        extensions: ["cancel.js", "AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+        equationNumbers: {
+        autoNumber: "AMS"
+        }
+      }
+    });
+  </script>
+
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Verification and Validation for AI Products</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Main Lecture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/v-and-v-concept-overview-and-terminologies">Terminologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/intro-to-supervised-ml">ML Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ml-verification-example-and-adversarial-attack">ML Verification</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class=" container-md " role="main">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <!-- ## Course: Verification and Validation (V&V) for AI Products -->
+
+<h3 id="machine-learning-verification-example-and-adversarial-attacks">Machine Learning Verification Example and Adversarial Attacks</h3>
+
+<p>We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks.</p>
+
+<p>For the purpose of this brief, we consider a ML model simply a mapping from inputs to outputs.</p>
+
+<p><strong>Example:</strong>
+Recall again our classification example in <a href="/intro-to-supervised-ml.md">ML Intro brief</a>. In that example, we try to predict whether a given coordinate is in one of Singapore islands or not. The input space is the set of all possible coordinates (<code class="language-plaintext highlighter-rouge">lon</code>, <code class="language-plaintext highlighter-rouge">lat</code>) and the output space is the set of binary labels <code class="language-plaintext highlighter-rouge">{0, 1}</code>, where <code class="language-plaintext highlighter-rouge">0</code> means the coordinate is not in Singapore and <code class="language-plaintext highlighter-rouge">1</code> means the coordinate is in Singapore islands. 
+<img src="/assets/img/dataset.png" alt="Dataset" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 1:</strong> The classification example in <a href="/intro-to-supervised-ml.md">ML Intro brief</a>.</span></p>
+
+<h4 id="input-output-specifications">Input-Output Specifications</h4>
+
+<p><em>Input-output specifications</em> is a way to formalize the expected behavior of the model.  It constraints the model to produce certain outputs for certain inputs (hence the name). To illustrate this, consider the following example.Suppose now we have a point (<code class="language-plaintext highlighter-rouge">lon</code>, <code class="language-plaintext highlighter-rouge">lat</code>) that we know is in Singapore islands and sufficiently far from the sea (e.g., some distance \(\epsilon\) away). We can then use the point as a center for some neighborhood around it and expect the model to output <code class="language-plaintext highlighter-rouge">1</code> for any point within the neighborhood.
+<img src="/assets/img/input-output-specification-example.png" alt="Input-Output Specification Example" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 2:</strong> Input-output specification example. If we know the black point is in Singapore islands and is \(\epsilon\)-far from the sea, we can expect the model to output <code class="language-plaintext highlighter-rouge">1</code> for any point within the radius of \(\epsilon\).</span></p>
+
+<p>If, however, the model outputs <code class="language-plaintext highlighter-rouge">0</code> for some points within the neighborhood, then the model violates this input-output specification.</p>
+
+<p>We can of course have more complex input-output specifications. For example, we can have multiple points with different labels and expect the model to output the same label for points within some neighborhood of each point.
+<img src="/assets/img/input-output-multi.png" alt="Input-Output Specification Example" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 3:</strong> Input-output specification example with multiple points. We can expect the model to output the same label for points within some neighborhood of each point.</span></p>
+
+<p>Given such input-output specifications, we can then verify if model satisfies the given specifications. If the model violates the specification, then we can include that in our verification report. This violation can be due to several reasons, such as:</p>
+
+<ul>
+  <li>the model is not trained properly,</li>
+  <li>the model is not robust to noise, or</li>
+  <li>the model is not general enough.</li>
+</ul>
+
+<p>With such information, we can then improve the model by retraining it with more data, adding regularization, or using more complex models. This is the essence of verification for ML models.</p>
+
+<p>For our example, the model fails the input-output specifications (see, for example, the top circle where most of the points are labeled <code class="language-plaintext highlighter-rouge">1</code> by the model, while in fact, they should be labeled <code class="language-plaintext highlighter-rouge">0</code>). This is because the model is not trained properly to cover the top part of the map. In fact, looking at the dataset, we can see that the model is trained on a dataset that does not cover the top part of the map. This is a common problem in ML models, where the model is not general enough to cover all possible inputs.
+<img src="/assets/img/failed-input-output-specs-decision-boundary.png" alt="Failed Input-Output Specification Example" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 4:</strong> The trained model fails the input-output specifications. The model fails to cover the top part of the map, where most of the points should be labeled <code class="language-plaintext highlighter-rouge">0</code>, but are labeled <code class="language-plaintext highlighter-rouge">1</code> by the model.</span></p>
+
+<h4 id="adversarial-examples">Adversarial Examples</h4>
+
+<p>In the previous example, we use a simple input-output specification that only checks for the consistency of the model output with the expected output. In practice, the specification can be more complex and involve multiple inputs and outputs. The key idea is to have a formal way to express the expected behavior of the model.</p>
+
+<p>Also, in this example, we can easily visualize the prediction of the model and compare it with the expected output since we are working in a 2D space. Imagine, however, if the input space is high-dimensional (such as images or texts), then the specification can be more complex and harder to visualize. An example of this is the adversarial examples, where a small perturbation in the input space can cause the model to misclassify the input. A famous example is this panda image that is classified as a gibbon by the model when a small carefully-optimized noise is added to the image.</p>
+
+<p><img src="/assets/img/adversarial_img_example_openAI.webp" alt="Adversarial Example for Image Classification" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 4:</strong> Adversarial example for image classification. The panda image is classified as a gibbon by the model when an imperceptible adversarial perturbation is added to the image. Source: <a href="https://openai.com/index/attacking-machine-learning-with-adversarial-examples/">OpenAI blog</a>.</span></p>
+
+<p>In this example, the model fails the input-output specification because the model is not robust to adversarial examples. This is a common problem in ML models, where the model is not robust to small perturbations in the input space.</p>
+
+<p><em>Adversarial examples</em> are inputs to ML models that are intentionally designed to cause the model to make a mistake. These examples are generated by adding small perturbations to the input data that are imperceptible to humans but can cause the model to misclassify the input. The process of generating adversarial examples is called <em>adversarial attack</em>.</p>
+
+<h3 id="adversarial-attacks">Adversarial Attacks</h3>
+
+<p>Currently, there are many adversarial attacks that can fool ML models. These attacks can be used to evaluate the robustness of ML models and improve their security. Consider the following example of an adversarial attack on <code class="language-plaintext highlighter-rouge">resnet</code> model using <code class="language-plaintext highlighter-rouge">foolbox</code> library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">foolbox</span> <span class="k">as</span> <span class="n">fb</span>
+
+<span class="c1"># instantiate the model
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="n">resnet18</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="bp">True</span><span class="p">).</span><span class="nb">eval</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Preproces an input image and get the model’s prediction.</p>
+
+<p><img src="/assets/img/merlion.jpg" alt="Merlion Image" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 5:</strong> The Merlion image. Source: <a href="https://en.wikipedia.org/wiki/Merlion_Park">Wikipedia</a>.</span></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get the imagenet class names
+</span><span class="n">classes</span> <span class="o">=</span> <span class="n">fb</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">imagenet_labels</span><span class="p">()</span>
+
+<span class="c1"># Load and preprocess an image
+</span><span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"./merlion.jpg"</span><span class="p">)</span>  <span class="c1"># Replace with your image path
+</span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">))</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">).</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
+
+<span class="c1">#transform to tensor 
+</span><span class="n">image</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)).</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># get the model's prediction
+</span><span class="n">pred</span> <span class="o">=</span> <span class="n">fmodel</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">pred</span><span class="p">.</span><span class="n">argmax</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The model predicts the image as <code class="language-plaintext highlighter-rouge">fountain</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Prediction: </span><span class="si">{</span><span class="n">classes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">prediction</span><span class="p">.</span><span class="n">numpy</span><span class="p">())]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="c1"># &gt;&gt;&gt; Prediction: fountain
+</span></code></pre></div></div>
+
+<p>Now, let’s generate an adversarial example using Fast Gradient Sign Method (FGSM) attack. See the <a href="https://foolbox.readthedocs.io/en/stable/modules/attacks/gradient.html#foolbox.attacks.GradientSignAttack">foolbox documentation</a> for more details.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create the attack
+</span><span class="kn">import</span> <span class="nn">foolbox</span> <span class="k">as</span> <span class="n">fb</span>
+
+<span class="n">fmodel</span> <span class="o">=</span> <span class="n">fb</span><span class="p">.</span><span class="n">PyTorchModel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">attack</span> <span class="o">=</span> <span class="n">fb</span><span class="p">.</span><span class="n">attacks</span><span class="p">.</span><span class="n">FGSM</span><span class="p">()</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">advs</span><span class="p">,</span> <span class="n">success</span> <span class="o">=</span> <span class="n">attack</span><span class="p">(</span><span class="n">fmodel</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">epsilons</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">])</span>
+
+<span class="c1"># get the model's prediction for the adversarial example
+</span><span class="n">prediction_adv</span> <span class="o">=</span> <span class="n">fmodel</span><span class="p">(</span><span class="n">advs</span><span class="p">).</span><span class="n">argmax</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Prediction: </span><span class="si">{</span><span class="n">classes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">prediction_adv</span><span class="p">.</span><span class="n">numpy</span><span class="p">())</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="c1"># &gt;&gt;&gt; Prediction: shower courtain
+</span></code></pre></div></div>
+
+<p>The model now predicts the adversarial example as <code class="language-plaintext highlighter-rouge">shower curtain</code>. This is an example of an adversarial attack that can fool the model to misclassify the input. Let’s see the adversarial example, original image, and the perturbation.</p>
+
+<p><img src="/assets/img/merlion-adversarial-example.png" alt="Merlion Adversarial Example" style="width: 100%; max-width: 800px; display: block;" />
+<span style="font-size:small"><strong>Fig. 6:</strong> The adversarial example of the Merlion image (left, predicted as <code class="language-plaintext highlighter-rouge">shower curtain</code>), the original image (middle, predicted as <code class="language-plaintext highlighter-rouge">fountain</code>), and the perturbation (right).</span></p>
+
+<p>Note again that the perturbation is imperceptible to humans but can cause the model to misclassify the input. Similar to the previous example, the model fails the input-output specifications because the model is not robust (particularly to adversarial examples). See the <a href="https://foolbox.readthedocs.io/en/stable/">foolbox documentation</a> for more details on adversarial attacks and defenses.</p>
+
+<h3 id="acknowledgment">Acknowledgment</h3>
+
+<p>This lecture material is created by the instructor based on the author’s knowledge and experience in machine learning and verification and validation. It uses mostly open-source materials and tools, such as Python, PyTorch, and <code class="language-plaintext highlighter-rouge">foolbox</code> Python package. The author would like to acknowledge the creators and contributors of these tools and materials for making them available to the public.</p>
+
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the author. The author has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.</p>
+
+<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://www.mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the author directly.</p>
+
+<p><span style="font-size:small"><strong>Content available online at <a href="https://vandvaiproducts.github.io/ml-verification-example-and-adversarial-attack">VandVAIProducts.github.io/ml-verification-example-and-adversarial-attack</a></strong>.</span></p>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Mansur Arief
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">VandVAIProducts.github.io</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <!-- <a href="https://beautifuljekyll.com">Beautiful Jekyll</a> -->
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+  
+    <script src="/assets/js/collapse.js"></script>
+  
+
+
+
+
+
+
+
+</body>
+</html>

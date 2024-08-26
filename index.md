@@ -61,7 +61,7 @@ Verification and validation (V&V) are essential activities in product developmen
 - **Concept Briefs**:
   - [Verification and Validation: Concept Overview and Terminologies](/v-and-v-concept-overview-and-terminologies)
   - [Intro to Supervised Machine Learning](/intro-to-supervised-ml)
-  - Machine Learning Verification: Notation and Definitions
+  - [Machine Learning Verification Example and Adversarial Attacks](/ml-verification-example-and-adversarial-attack)
 - [NASA Systems Engineering Handbook](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf), Chapter 5.3 and 5.4 **[Optional, highly recommended]**
 - [Algorithms for Verifying Deep Neural Nets (Changliu Liu, et al., 2021)](https://theory.stanford.edu/~barrett/pubs/LAL+21.pdf) **[Optional]**
 
