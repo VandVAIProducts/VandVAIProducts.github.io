@@ -20,7 +20,7 @@ Verification and validation (V&V) are essential activities in product developmen
 
 - **Duration**: 45 minutes lectures and in-class activities + 15 minutes Q&A
 - **Date**: 2024-09-05
-- **Time**: 10:00 - 11:00 AM SST (Singapore Standard Time, UTC+8)
+- **Time**: 08:30 - 09:30 AM SST (Singapore Standard Time, UTC+8)
 - **Location**: Teams Meeting (Link will be shared via email)
 
 ### Instructor
