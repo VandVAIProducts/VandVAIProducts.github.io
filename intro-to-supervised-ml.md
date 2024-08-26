@@ -11,9 +11,9 @@ description: "This brief contains notes on supervised machine learning models, i
 We will cover the following topics in this brief:
 
 1. **A high-level overview of supervised machine learning**
-2. **Example: Predicting whether a point is inside a target region**
-3. **Preparing data for supervised machine learning**
-4. **Classification examples using Deep Neural Networks**
+2. **Example: Predicting whether a point is inside a target region (Singapore islands)**
+3. **Preparing data for ML model training**
+4. **Training a Deep Neural Network (DNN) model**
 5. **Evaluating the model performance**
 
 Our objective is to gain a basic understanding of ML models and how to evaluate their performance. We will skip the mathematical details and focus on the concepts and practical applications necessary for the main lecture on [Verification and Validation (V&V) for ML Models](/).
@@ -120,8 +120,6 @@ print(f'Total trainable parameters: {total_params}')
 ```
 
 We can then train the model using the training data and evaluate its performance on the validation set. We will use the `torch.optim` module to define an optimizer and the `torch.nn.BCELoss` function to define the loss function. This loss function is suitable for binary classification tasks, where the output is represented as a probability between 0 and 1. The final prediction is made by rounding the output to the nearest integer (0 or 1). See [Binary Cross Entropy Loss](https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html) for more details or explore [Loss Functions](https://pytorch.org/docs/stable/nn.html#loss-functions) documentation.
-
-```python
 
 We will use the `Adam` optimizer, which is an adaptive learning rate optimization algorithm. The optimizer adjusts the learning rate during training to improve model performance. See [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) for more details.
 

@@ -15,7 +15,7 @@
   <meta name="author" content="Mansur Arief">
   
 
-  <meta name="description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+  <meta name="description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
 
   
 
@@ -82,7 +82,7 @@
   
   <meta property="og:site_name" content="Verification and Validation for AI Products">
   <meta property="og:title" content="Verification and Validation for AI Products">
-  <meta property="og:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+  <meta property="og:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
 
   
 
@@ -99,7 +99,7 @@
   <meta name="twitter:creator" content="@">
 
   <meta property="twitter:title" content="Verification and Validation for AI Products">
-  <meta property="twitter:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+  <meta property="twitter:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
 
   
 
@@ -112,7 +112,7 @@
         "@context": "http://schema.org",
         "@type": "WebPage",
         "headline": "Verification and Validation for AI Products",
-        "description": "### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...",
+        "description": "### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...",
         "image": "http://localhost:4000/",
         "url": "http://localhost:4000/intro-to-supervised-ml/"
       }
@@ -197,9 +197,9 @@
 
 <ol>
   <li><strong>A high-level overview of supervised machine learning</strong></li>
-  <li><strong>Example: Predicting whether a point is inside a target region</strong></li>
-  <li><strong>Preparing data for supervised machine learning</strong></li>
-  <li><strong>Classification examples using Deep Neural Networks</strong></li>
+  <li><strong>Example: Predicting whether a point is inside a target region (Singapore islands)</strong></li>
+  <li><strong>Preparing data for ML model training</strong></li>
+  <li><strong>Training a Deep Neural Network (DNN) model</strong></li>
   <li><strong>Evaluating the model performance</strong></li>
 </ol>
 
@@ -302,11 +302,9 @@
 
 <p>We can then train the model using the training data and evaluate its performance on the validation set. We will use the <code class="language-plaintext highlighter-rouge">torch.optim</code> module to define an optimizer and the <code class="language-plaintext highlighter-rouge">torch.nn.BCELoss</code> function to define the loss function. This loss function is suitable for binary classification tasks, where the output is represented as a probability between 0 and 1. The final prediction is made by rounding the output to the nearest integer (0 or 1). See <a href="https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html">Binary Cross Entropy Loss</a> for more details or explore <a href="https://pytorch.org/docs/stable/nn.html#loss-functions">Loss Functions</a> documentation.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="n">We</span> <span class="n">will</span> <span class="n">use</span> <span class="n">the</span> <span class="sb">`Adam`</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">adaptive</span> <span class="n">learning</span> <span class="n">rate</span> <span class="n">optimization</span> <span class="n">algorithm</span><span class="p">.</span> <span class="n">The</span> <span class="n">optimizer</span> <span class="n">adjusts</span> <span class="n">the</span> <span class="n">learning</span> <span class="n">rate</span> <span class="n">during</span> <span class="n">training</span> <span class="n">to</span> <span class="n">improve</span> <span class="n">model</span> <span class="n">performance</span><span class="p">.</span> <span class="n">See</span> <span class="p">[</span><span class="n">Adam</span><span class="p">:</span> <span class="n">A</span> <span class="n">Method</span> <span class="k">for</span> <span class="n">Stochastic</span> <span class="n">Optimization</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1412.6980</span><span class="p">)</span> <span class="k">for</span> <span class="n">more</span> <span class="n">details</span><span class="p">.</span>
+<p>We will use the <code class="language-plaintext highlighter-rouge">Adam</code> optimizer, which is an adaptive learning rate optimization algorithm. The optimizer adjusts the learning rate during training to improve model performance. See <a href="https://arxiv.org/abs/1412.6980">Adam: A Method for Stochastic Optimization</a> for more details.</p>
 
-<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
 <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">BCELoss</span><span class="p">()</span>
 <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="p">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">parameters</span><span class="p">())</span>
 </code></pre></div></div>
