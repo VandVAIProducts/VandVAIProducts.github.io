@@ -20,7 +20,7 @@ Verification and validation (V&V) are essential activities in product developmen
 
 - **Duration**: 45 minutes lectures and in-class activities + 15 minutes Q&A
 - **Date**: 2024-09-05
-- **Time**: 08:30 - 09:30 AM SST (Singapore Standard Time, UTC+8)
+- **Time**: 09:45 - 10:45 AM SST (Singapore Standard Time, UTC+8)
 - **Location**: Teams Meeting (Link will be shared via email)
 
 ### Instructor
@@ -29,7 +29,7 @@ Verification and validation (V&V) are essential activities in product developmen
 - **Affiliation**: Postdoctoral Scholar, Stanford Intelligent Systems Laboratory ([SISL](https://sisl.stanford.edu))
 - **Institution**: Stanford University
 - **Email**: [mansur.arief@stanford.edu](mailto:mansur.arief@stanford.edu)
-- **Website**: [mansurarief.github.io](https://www.mansurarief.github.io)
+- **Website**: [mansurarief.github.io](https://mansurarief.github.io)
 
 ### Learning Objectives
 
