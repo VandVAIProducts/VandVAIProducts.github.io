@@ -18,7 +18,7 @@ author: Mansur Arief
 navbar-links:
   Main Lecture: "index"
   Terminologies: "v-and-v-concept-overview-and-terminologies"
-  # Competition: "competition"
+  ML Intro: "intro-to-supervised-ml"
   # Programs: "programs"
   # Organizers: "#organizers"
   # Registration: "registration"

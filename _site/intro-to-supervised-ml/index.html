@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Verification and Validation for AI Products</title>
+
+  
+  <meta name="author" content="Mansur Arief">
+  
+
+  <meta name="description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Verification and Validation for AI Products" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Verification and Validation for AI Products">
+  <meta property="og:title" content="Verification and Validation for AI Products">
+  <meta property="og:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/intro-to-supervised-ml/">
+  <link rel="canonical" href="http://localhost:4000/intro-to-supervised-ml/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Verification and Validation for AI Products">
+  <meta property="twitter:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...">
+
+  
+
+  
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "headline": "Verification and Validation for AI Products",
+        "description": "### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region** 3. **Preparing data for...",
+        "image": "http://localhost:4000/",
+        "url": "http://localhost:4000/intro-to-supervised-ml/"
+      }
+      </script>
+
+  
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true},
+        jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+        extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+        TeX: {
+        extensions: ["cancel.js", "AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+        equationNumbers: {
+        autoNumber: "AMS"
+        }
+      }
+    });
+  </script>
+
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Verification and Validation for AI Products</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Main Lecture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/v-and-v-concept-overview-and-terminologies">Terminologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/intro-to-supervised-ml">ML Intro</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class=" container-md " role="main">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <!-- ## Course: Verification and Validation (V&V) for AI Products -->
+
+<h3 id="intro-to-supervised-machine-learning-ml-models">Intro to Supervised Machine Learning (ML) Models</h3>
+
+<p>We will cover the following topics in this brief:</p>
+
+<ol>
+  <li><strong>A high-level overview of supervised machine learning</strong></li>
+  <li><strong>Example: Predicting whether a point is inside a target region</strong></li>
+  <li><strong>Preparing data for supervised machine learning</strong></li>
+  <li><strong>Classification examples using Deep Neural Networks</strong></li>
+  <li><strong>Evaluating the model performance</strong></li>
+</ol>
+
+<p>Our objective is to gain a basic understanding of ML models and how to evaluate their performance. We will skip the mathematical details and focus on the concepts and practical applications necessary for the main lecture on <a href="/">Verification and Validation (V&amp;V) for ML Models</a>.</p>
+
+<h3 id="supervised-machine-learning-ml">Supervised Machine Learning (ML)</h3>
+
+<p>Supervised learning is a type of machine learning (ML) framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.</p>
+
+<p><strong>How does it differ from classical programming?</strong></p>
+
+<p>In classical programming, we write rules and logic to solve a problem. In supervised ML, we provide input-output pairs and let the model learn the rules and logic automatically. The model learns the patterns and relationships in the data to make predictions by minimizing the error between the predicted and actual labels (hence the term <em>supervised</em>).</p>
+
+<p><strong>How does the ML model learn the patterns in the data?</strong></p>
+
+<p>The model learns the patterns by adjusting its internal parameters based on the training data. The process is called <em>training</em> the model. The model is trained to minimize the error between the predicted output and the actual output. The error is measured using a <em>loss function</em> that quantifies the difference between the predicted and actual output.</p>
+
+<p><strong>How do we evaluate the model performance?</strong></p>
+
+<p>We evaluate the model performance using metrics such as accuracy (i.e. the percentage of correct predictions). The model is tested on a separate dataset called the <em>test set</em> to measure its performance on unseen data. The goal is to build a model that generalizes well to new data. To learn more about model evaluation, refer to the <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">Evaluation Metrics</a>.</p>
+
+<h3 id="example-predicting-whether-a-point-is-inside-a-target-region">Example: Predicting whether a point is inside a target region</h3>
+
+<p>Consider a simple example of predicting whether a point is inside a target region. The model learns the boundary of the target region by adjusting its parameters based on the training data. The model can then predict whether a new point is inside or outside the target region based on the learned boundary.</p>
+
+<p>The dataset for this example is shown below.
+<img src="/assets/img/dataset.png" alt="Dataset for Predicting Point Inside Target Region" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 1</strong> Dataset for Predicting Point Inside Target Region (Singapore islands)</span></p>
+
+<p>The dataset consists of points with their corresponding labels (inside or outside the islands in Singapore). Each point is a pair of coordinates (latitude, longitude) and the label is a binary value (True or False), indicating whether the point is inside the region or not. For this example, we assume to have 1500 points in the dataset.</p>
+
+<h3 id="preparing-data-for-training-a-ml-model">Preparing Data for Training a ML Model</h3>
+
+<p>Before training the model, we need to prepare the data. For simplicity, we will use the dataset shown in Fig. 1. Suppose the dataset is stored in a dataset <code class="language-plaintext highlighter-rouge">df</code> with three columns: <code class="language-plaintext highlighter-rouge">latitude</code>, <code class="language-plaintext highlighter-rouge">longitude</code>, and <code class="language-plaintext highlighter-rouge">label</code>. We can split the dataset into input features <code class="language-plaintext highlighter-rouge">X</code> and output labels <code class="language-plaintext highlighter-rouge">y</code> as follows.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prepare the data
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s">'lon'</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">]].</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'label'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">).</span><span class="n">values</span>
+</code></pre></div></div>
+
+<p>The input features <code class="language-plaintext highlighter-rouge">X</code> are the coordinates (longitude, latitude) and the output labels <code class="language-plaintext highlighter-rouge">y</code> are now binary values (0 or 1). We can then split the data into training, validation, and test sets using the <code class="language-plaintext highlighter-rouge">train_test_split</code> function from the <code class="language-plaintext highlighter-rouge">sklearn</code> library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We can further preprocess the data by normalizing the input features and converting into PyTorch tensors for ease of training. Note that there are many ways to preprocess the data, even a whole field of study called <em>Feature Engineering</em>. See <a href="https://www.oreilly.com/library/view/feature-engineering-for/9781491953235/">Feature Engineering for Machine Learning</a> for more details.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Standardize features
+</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_val_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Convert to PyTorch tensors
+</span><span class="n">X_train_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">)</span>
+<span class="n">y_train_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_val_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">X_val_scaled</span><span class="p">)</span>
+<span class="n">y_val_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">y_val</span><span class="p">)</span>
+<span class="n">X_test_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+<span class="n">y_test_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="classification-examples-using-deep-neural-networks">Classification Examples using Deep Neural Networks</h3>
+
+<p>We will use a simple Deep Neural Network (DNN) model for classification. The model consists of an input layer, hidden layers, and an output layer. We will use the <code class="language-plaintext highlighter-rouge">torch.nn</code> module to define a simple DNN model.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define the neural network
+</span><span class="k">class</span> <span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Net</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc4</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc5</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc6</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc4</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc5</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fc6</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">x</span>
+</code></pre></div></div>
+
+<p>In this example, we define a simple DNN model with 6 fully connected layers. The input layer has 2 neurons (corresponding to the latitude and longitude features) and the output layer has 1 neuron (for binary classification). The model has multiple hidden layers with ReLU activation functions and a sigmoid activation function in the output layer.</p>
+
+<p><img src="/assets/img/neural-net-architecture.png" alt="Neural Network Architecture" style="width: 100%; max-width: 800px; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 2</strong> Deep Neural Network Architecture</span></p>
+
+<p>The total number of parameters in the model is calculated as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">total_params</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">numel</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">model</span><span class="p">.</span><span class="n">parameters</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="p">.</span><span class="n">requires_grad</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Total trainable parameters: </span><span class="si">{</span><span class="n">total_params</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="c1"># &gt;&gt; Total trainable parameters: 76673
+</span></code></pre></div></div>
+
+<p>We can then train the model using the training data and evaluate its performance on the validation set. We will use the <code class="language-plaintext highlighter-rouge">torch.optim</code> module to define an optimizer and the <code class="language-plaintext highlighter-rouge">torch.nn.BCELoss</code> function to define the loss function. This loss function is suitable for binary classification tasks, where the output is represented as a probability between 0 and 1. The final prediction is made by rounding the output to the nearest integer (0 or 1). See <a href="https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html">Binary Cross Entropy Loss</a> for more details or explore <a href="https://pytorch.org/docs/stable/nn.html#loss-functions">Loss Functions</a> documentation.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">We</span> <span class="n">will</span> <span class="n">use</span> <span class="n">the</span> <span class="sb">`Adam`</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">adaptive</span> <span class="n">learning</span> <span class="n">rate</span> <span class="n">optimization</span> <span class="n">algorithm</span><span class="p">.</span> <span class="n">The</span> <span class="n">optimizer</span> <span class="n">adjusts</span> <span class="n">the</span> <span class="n">learning</span> <span class="n">rate</span> <span class="n">during</span> <span class="n">training</span> <span class="n">to</span> <span class="n">improve</span> <span class="n">model</span> <span class="n">performance</span><span class="p">.</span> <span class="n">See</span> <span class="p">[</span><span class="n">Adam</span><span class="p">:</span> <span class="n">A</span> <span class="n">Method</span> <span class="k">for</span> <span class="n">Stochastic</span> <span class="n">Optimization</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1412.6980</span><span class="p">)</span> <span class="k">for</span> <span class="n">more</span> <span class="n">details</span><span class="p">.</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">BCELoss</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="p">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">parameters</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>We can then train the model using the training data and evaluate its performance on the validation set.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Training loop
+</span><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
+    <span class="n">model</span><span class="p">.</span><span class="n">train</span><span class="p">()</span>
+    <span class="n">optimizer</span><span class="p">.</span><span class="n">zero_grad</span><span class="p">()</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X_train_tensor</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">y_train_tensor</span><span class="p">)</span>
+    <span class="n">loss</span><span class="p">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="n">optimizer</span><span class="p">.</span><span class="n">step</span><span class="p">()</span>
+    
+    <span class="c1"># Validation
+</span>    <span class="n">model</span><span class="p">.</span><span class="nb">eval</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="p">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="n">val_outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X_val_tensor</span><span class="p">)</span>
+        <span class="n">val_loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">val_outputs</span><span class="p">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">y_val_tensor</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Epoch [</span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">num_epochs</span><span class="si">}</span><span class="s">], Train Loss: </span><span class="si">{</span><span class="n">loss</span><span class="p">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">, Val Loss: </span><span class="si">{</span><span class="n">val_loss</span><span class="p">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Running this code will trigger iterations of training and validation. The model will adjust its parameters to minimize the loss function. The loss values will be printed at regular intervals to monitor the training progress. The training will continue for a specified number of epochs (e.g., 5000 epochs).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Epoch</span> <span class="p">[</span><span class="mi">10</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.6167</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.6161</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">20</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.4324</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.4780</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">30</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3926</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.4635</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">40</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3586</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.4290</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">50</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3011</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3634</span>
+<span class="p">...</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">4970</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.0082</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3869</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">4980</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.0081</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3869</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">4990</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.0080</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3901</span>
+<span class="n">Epoch</span> <span class="p">[</span><span class="mi">5000</span><span class="o">/</span><span class="mi">5000</span><span class="p">],</span> <span class="n">Train</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.0080</span><span class="p">,</span> <span class="n">Val</span> <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.3907</span>
+</code></pre></div></div>
+
+<h3 id="evaluating-the-model-performance">Evaluating the Model Performance</h3>
+
+<p>After training the model, we can evaluate its performance on the test set. We can calculate the accuracy of the model on the test set by comparing the predicted labels with the actual labels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Evaluate on test set
+</span><span class="n">model</span><span class="p">.</span><span class="nb">eval</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">torch</span><span class="p">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="n">test_outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X_test_tensor</span><span class="p">)</span>
+    <span class="n">test_loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">test_outputs</span><span class="p">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">y_test_tensor</span><span class="p">)</span>
+    <span class="n">test_predictions</span> <span class="o">=</span> <span class="p">(</span><span class="n">test_outputs</span><span class="p">.</span><span class="n">squeeze</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">).</span><span class="nb">float</span><span class="p">()</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">test_predictions</span> <span class="o">==</span> <span class="n">y_test_tensor</span><span class="p">).</span><span class="nb">float</span><span class="p">().</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Test Loss: </span><span class="si">{</span><span class="n">test_loss</span><span class="p">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">, Test Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="p">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="c1"># &gt;&gt; Test Loss: 0.9754, Test Accuracy: 0.9250
+</span></code></pre></div></div>
+
+<p>Note here that the accuracy is calculated as the percentage of correct predictions on the test set. The test loss is calculated using the same loss function as in the training and validation steps. The model’s performance can be further evaluated using other metrics such as precision, recall, F1-score, etc. See <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics">Classification Metrics</a> for more details.</p>
+
+<p>We can visualize the predicted labels on the test set to see how well the model performs in classifying points inside and outside the target region.</p>
+
+<p><img src="/assets/img/testing-set.png" alt="Predicted Labels on Test Set" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 3</strong> Predicted Labels on Test Set</span></p>
+
+<p>In fact, we can visualize the decision boundary learned by the model to separate the points inside and outside the target region. The decision boundary is the line that separates the two classes in the feature space.</p>
+
+<p><img src="/assets/img/decision-boundary.png" alt="Decision Boundary" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 4</strong> Decision Boundary</span></p>
+
+<p>The decision boundary is learned by the model during training based on the patterns in the data. The model learns to classify points based on their features (latitude, longitude) and predict whether they are inside or outside the target region. To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>In this brief, we covered the following topics:</p>
+
+<ul>
+  <li>
+    <p><em>A high-level overview of supervised machine learning</em>: Supervised learning is a type of ML framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs to learn a mapping function from input to output. We do not need to write rules and logic explicitly as in classical programming. Instead, we provide input-output pairs and let the model learn the patterns and relationships in the data.</p>
+  </li>
+  <li>
+    <p><em>Example: Predicting whether a point is inside a target region</em>: We used a simple example of predicting whether a point is inside a target region. The model learns the boundary of the target region based on the training data and can predict whether a new point is inside or outside the target region.</p>
+  </li>
+  <li>
+    <p><em>Preparing data for supervised machine learning</em>: We discussed how to prepare the data for training a ML model, including splitting the dataset into input features and output labels, normalizing the input features, and converting the data into PyTorch tensors.</p>
+  </li>
+  <li>
+    <p><em>Classification examples using Deep Neural Networks</em>: We defined a simple Deep Neural Network (DNN) model for classification and trained the model using the training data. We used the Adam optimizer and Binary Cross Entropy Loss function to train the model and evaluated its performance on the test set.</p>
+  </li>
+  <li>
+    <p><em>Evaluating the model performance</em>: We evaluated the model performance on the test set by calculating the accuracy of the model and visualizing the predicted labels. We also visualized the decision boundary learned by the model to separate the points inside and outside the target region.</p>
+  </li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>This lecture material is prepared by the instructor using various online resources and textbooks on machine learning and deep learning. The figures are created by the author using Subzone Census 2010 data with the help of <a href="https://geopandas.org/">GeoPandas</a> and <a href="https://matplotlib.org/">Matplotlib</a>. The figures are rendered using <a href="https://jupyter.org/">Jupyter Notebook</a> and <a href="https://colab.research.google.com/">Google Colab</a>. The author acknowledges the contributions of the original authors and sources in compiling this material.</p>
+
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the author. <a href="https://gemini.github.com">Gemini</a> has been used within Google Colab to generate the code snippets based on the input provided by the author. The final content has been reviewed and edited by the instructor.</p>
+
+<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://www.mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the author directly.</p>
+
+<p><span style="font-size:small"><strong>Content available online at <a href="https://vandvaiproducts.github.io/intro-to-supervised-ml">VandVAIProducts.github.io/intro-to-supervised-ml</a></strong>.</span></p>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Mansur Arief
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">VandVAIProducts.github.io</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <!-- <a href="https://beautifuljekyll.com">Beautiful Jekyll</a> -->
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+  
+    <script src="/assets/js/collapse.js"></script>
+  
+
+
+
+
+
+
+
+</body>
+</html>
