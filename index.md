@@ -7,11 +7,9 @@ tags: [Verification, Validation, Machine Learning, Product Development, AI Produ
 
 <!-- ## Course: Verification and Validation (V&V) for AI Products -->
 
-### Session X: Verification and Validation (V&V) for Machine Learning (ML) Models
+### Lecture 0: Verification and Validation (V&V) for Machine Learning (ML) Models
 
-<!-- **Abstract:** Verification and validation (V&V) are essential activities in product development. V&V ensures that the product meets the technical specifications as well as user requirements. Verification is the process of determining whether the product is built correctly, while validation is the process of determining whether the right product is built. In this session, we will review V&V definitions, scope differences, activities, and standards. We will discuss the importance of V&V as a critical step in product development process, especially for AI products that often consists of machine learning (ML) models. We will also highlight how V&V frameworks can help in risk management and technology readiness assessment. If time permits, we will discuss V&V techniques to verify input-output specification and find failure modes for ML models through class activities. Students are expected to participate actively in discussions and class activities. Pre-reading materials are available both in the course website and attached. By the end of this session, students will be able to identify V&V task, argue their critical importance as part of product development process, describe methods and activities to carry out V&V in practice, and give examples of falsification techniques to find failures for ML models. -->
-
-Verification and validation (V&V) are essential activities in product development. V&V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process of determining whether the product is built correctly, while *validation* is the process of determining whether the right product is built. In this session,
+Verification and validation (V&V) are essential activities in product development. V&V ensures that the product meets the technical specifications as well as user requirements. *Verification* is the process of determining whether the product is built correctly, while *validation* is the process of determining whether the right product is built. In this lecture,
 
 - we will review V&V definitions, scope differences, activities, and standards;
 - we will discuss the importance of V&V as a critical step in product development process, especially for AI products that often consists of machine learning (ML) models;
@@ -21,7 +19,7 @@ Verification and validation (V&V) are essential activities in product developmen
 ### Schedule
 
 - **Duration**: 45 minutes lectures and in-class activities + 15 minutes Q&A
-- **Date**: 2024-09-05 
+- **Date**: 2024-09-05
 - **Time**: 10:00 - 11:00 AM SST (Singapore Standard Time, UTC+8)
 - **Location**: Teams Meeting (Link will be shared via email)
 
@@ -40,23 +38,12 @@ Verification and validation (V&V) are essential activities in product developmen
 - Students can illustrate V&V methods and activities and describe their outcomes.
 - Students can give examples of falsification techniques to find failures of ML models.
 
-### Tools 
+### Tools
 
 - **Microsoft Teams**: Please make sure you have installed Teams on your computer or mobile device or use the web version.
 - **Google Slides**: Mainly for presentation by the instructor.
 - **Poll Everywhere**: For interactive quizzes and polls. You can use your smartphone or computer to participate and no account is required.
 - **HuggingFace Spaces**: For class activity on adversarial attacks. You do NOT need a HuggingFace account to access the space.
-<!-- - **Google Collaboratory**: For class activity on ML model V&V. You will need a Google account to access the notebook. -->
-
-
-<!-- ### Agenda
-
-- Introduction to Verification and Validation (V&V)
-- V&V Activities and  Standards
-- Importance of V&V for Product Development
-- V&V for Machine Learning (ML) Products
-- ML Model Verification and Validation *[Optional, if time permits]*
-- Summary and Q&A -->
 
 ### Pre-Reading Materials
 
@@ -80,4 +67,3 @@ You may use AI tools to assist your learning process. Please be aware of respons
 ### Acknowledgement
 
 [Copilot](https://copilot.github.com) has been used to generate text for this course website, but the final content has been reviewed and edited by the instructor.
-<!-- Copilot is an AI tool developed by [GitHub](https://github.com) and [OpenAI](https://openai.com) to help developers write code and text. Copilot has been trained on a variety of sources, including publicly available data, code, and text. If you have any concerns, please let me know. -->

@@ -18,7 +18,6 @@ We will cover the following topics in this brief:
 
 Our objective is to gain a basic understanding of ML models and how to evaluate their performance. We will skip the mathematical details and focus on the concepts and practical applications necessary for the main lecture on [Verification and Validation (V&V) for ML Models](/).
 
-
 ### Supervised Machine Learning (ML)
 
 Supervised learning is a type of machine learning (ML) framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.
@@ -106,7 +105,7 @@ class Net(nn.Module):
         return x
 ```
 
-In this example, we define a simple DNN model with 6 fully connected layers. The input layer has 2 neurons (corresponding to the latitude and longitude features) and the output layer has 1 neuron (for binary classification). The model has multiple hidden layers with ReLU activation functions and a sigmoid activation function in the output layer. 
+In this example, we define a simple DNN model with 6 fully connected layers. The input layer has 2 neurons (corresponding to the latitude and longitude features) and the output layer has 1 neuron (for binary classification). The model has multiple hidden layers with ReLU activation functions and a sigmoid activation function in the output layer.
 
 <img src="/assets/img/neural-net-architecture.png" alt="Neural Network Architecture" style="width: 100%; max-width: 800px; display: block;">
 <span style="font-size:x-small; text-align:center; margin-left:0em;">**Fig. 2** Deep Neural Network Architecture</span>
@@ -129,7 +128,7 @@ criterion = nn.BCELoss()
 optimizer = optim.Adam(model.parameters())
 ```
 
-We can then train the model using the training data and evaluate its performance on the validation set. 
+We can then train the model using the training data and evaluate its performance on the validation set.
 
 ```python
 # Training loop
@@ -197,7 +196,6 @@ In fact, we can visualize the decision boundary learned by the model to separate
 <span style="font-size:x-small; text-align:center; margin-left:0em;">**Fig. 4** Decision Boundary</span>
 
 The decision boundary is learned by the model during training based on the patterns in the data. The model learns to classify points based on their features (latitude, longitude) and predict whether they are inside or outside the target region. To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.
-
 
 ### Summary
 

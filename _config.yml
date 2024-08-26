@@ -16,8 +16,8 @@ author: Mansur Arief
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Main Lecture: "index"
-  Terminologies: "v-and-v-concept-overview-and-terminologies"
+  Lecture: "index"
+  V&V Terminologies: "v-and-v-concept-overview-and-terminologies"
   ML Intro: "intro-to-supervised-ml"
   ML Verification: "ml-verification-example-and-adversarial-attack"
   # Programs: "programs"
