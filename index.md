@@ -45,14 +45,14 @@ Verification and validation (V&V) are essential activities in product developmen
 - **Poll Everywhere**: For interactive quizzes and polls. You can use your smartphone or computer to participate and no account is required.
 - **HuggingFace Spaces**: For class activity on adversarial attacks. You do NOT need a HuggingFace account to access the space.
 
-### Pre-Reading Materials
+### (Optional) Reading Materials
 
 - **Concept Briefs**:
-  - [Verification and Validation: Concept Overview and Terminologies](/v-and-v-concept-overview-and-terminologies)
-  - [Intro to Supervised Machine Learning](/intro-to-supervised-ml)
-  - [Machine Learning Verification Example and Adversarial Attacks](/ml-verification-example-and-adversarial-attack)
-- [NASA Systems Engineering Handbook](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf), Chapter 5.3 and 5.4 **[Optional, highly recommended]**
-- [Algorithms for Verifying Deep Neural Nets (Changliu Liu, et al., 2021)](https://theory.stanford.edu/~barrett/pubs/LAL+21.pdf) **[Optional]**
+  - [Verification and Validation: Concept Overview and Terminologies](/v-and-v-concept-overview-and-terminologies) [highly recommend to skim through before the lecture]
+  - [Intro to Supervised Machine Learning](/intro-to-supervised-ml) [recommended for those who are not familiar with ML or deep learning, or simply need a refresher]
+  - [Machine Learning Verification Example and Adversarial Attacks](/ml-verification-example-and-adversarial-attack) [useful to checkout if you are interested in how to code adversarial attacks in Python]
+- [NASA Systems Engineering Handbook, Chapter 5.3 and 5.4](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf) [one of the main references for V&V in aviation and aerospace industry from systems engineering perspective, though not necessarily specific to AI products]
+- [Algorithms for Verifying Deep Neural Nets (Changliu Liu, et al., 2021)](https://theory.stanford.edu/~barrett/pubs/LAL+21.pdf) [recommended for those interested in the theoretical aspect of ML verification -- FYI, this level of rigor is beyond the scope of UG course, but might be useful for graduate students or those interested in pursuing research in this area]
 
 ### Accommodations
 
