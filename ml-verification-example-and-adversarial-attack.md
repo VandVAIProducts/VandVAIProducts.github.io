@@ -123,7 +123,7 @@ This lecture material is created by the instructor based on the author's knowled
 
 [Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the author. The author has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.
 
-This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://www.mansurarief.github.io). For more information, please contact the author directly.
+This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the author directly.
 
 <span style="font-size:small">**Content available online at [VandVAIProducts.github.io/ml-verification-example-and-adversarial-attack](https://vandvaiproducts.github.io/ml-verification-example-and-adversarial-attack)**.</span>
   

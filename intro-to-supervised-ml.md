@@ -217,7 +217,7 @@ This lecture material is prepared by the instructor using various online resourc
 
 [Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the author. [Gemini](https://gemini.github.com) has been used within Google Colab to generate the code snippets based on the input provided by the author. The final content has been reviewed and edited by the instructor.
 
-This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://www.mansurarief.github.io). For more information, please contact the author directly.
+This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the author directly.
 
 <span style="font-size:small">**Content available online at [VandVAIProducts.github.io/intro-to-supervised-ml](https://vandvaiproducts.github.io/intro-to-supervised-ml)**.</span>
   
