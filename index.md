@@ -46,7 +46,7 @@ Verification and validation (V&V) are essential activities in product developmen
 - **Google Slides**: Mainly for presentation by the instructor.
 - **Poll Everywhere**: For interactive quizzes and polls. You can use your smartphone or computer to participate and no account is required.
 - **HuggingFace Spaces**: For class activity on adversarial attacks. You do NOT need a HuggingFace account to access the space.
-- **Google Collaboratory**: For class activity on ML model V&V. You will need a Google account to access the notebook.
+<!-- - **Google Collaboratory**: For class activity on ML model V&V. You will need a Google account to access the notebook. -->
 
 
 <!-- ### Agenda
