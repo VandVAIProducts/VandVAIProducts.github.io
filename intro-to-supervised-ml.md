@@ -10,17 +10,17 @@ description: "This brief contains notes on supervised machine learning models, i
 
 We will cover the following topics in this brief:
 
-1. **A high-level overview of supervised machine learning**
-2. **Example: Predicting whether a point is inside a target region (Singapore islands)**
-3. **Preparing data for ML model training**
-4. **Training a Deep Neural Network (DNN) model**
-5. **Evaluating the model performance**
+1. A high-level overview of supervised machine learning
+2. Example: Predicting whether a point is inside a target region (Singapore islands)
+3. Preparing data for ML model training
+4. Training a Deep Neural Network (DNN) model
+5. Evaluating the model performance
 
 Our objective is to gain a basic understanding of ML models and how to evaluate their performance. We will skip the mathematical details and focus on the concepts and practical applications necessary for the main lecture on [Verification and Validation (V&V) for ML Models](/).
 
 ### Supervised Machine Learning (ML)
 
-Supervised learning is a type of machine learning (ML) framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.
+Supervised learning is a type of ML framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.
 
 **How does it differ from classical programming?**
 
@@ -46,7 +46,7 @@ The dataset consists of points with their corresponding labels (inside or outsid
 
 ### Preparing Data for Training a ML Model
 
-Before training the model, we need to prepare the data. For simplicity, we will use the dataset shown in Fig. 1. Suppose the dataset is stored in a dataset `df` with three columns: `latitude`, `longitude`, and `label`. We can split the dataset into input features `X` and output labels `y` as follows.
+Before training the model, we need to prepare the data. For simplicity, we will use the dataset shown in Fig. 1. Suppose the dataset is stored in a dataset `df` with three columns: `lat`, `lon`, and `label`. We can split the dataset into input features `X` and output labels `y` as follows.
 
 ```python
 # Prepare the data
@@ -190,12 +190,12 @@ We can visualize the predicted labels on the test set to see how well the model 
 <img src="/assets/img/testing-set.png" alt="Predicted Labels on Test Set" style="width: 100%; max-width: 600px; display: block;">
 <span style="font-size:x-small; text-align:center; margin-left:0em;">**Fig. 3** Predicted Labels on Test Set</span>
 
-In fact, we can visualize the decision boundary learned by the model to separate the points inside and outside the target region. The decision boundary is the line that separates the two classes in the feature space.
+In fact, we can visualize the decision boundary learned by the model to separate the points inside and outside the target region. The decision boundary is the line that separates the two classes in the input/feature space.
 
 <img src="/assets/img/decision-boundary.png" alt="Decision Boundary" style="width: 100%; max-width: 600px; display: block;">
 <span style="font-size:x-small; text-align:center; margin-left:0em;">**Fig. 4** Decision Boundary</span>
 
-The decision boundary is learned by the model during training based on the patterns in the data. The model learns to classify points based on their features (latitude, longitude) and predict whether they are inside or outside the target region. To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.
+To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.
 
 ### Summary
 
@@ -213,11 +213,11 @@ In this brief, we covered the following topics:
 
 ### Acknowledgements
 
-This lecture material is prepared by the instructor using various online resources and textbooks on machine learning and deep learning. The figures are created by the author using Subzone Census 2010 data with the help of [GeoPandas](https://geopandas.org/) and [Matplotlib](https://matplotlib.org/). The figures are rendered using [Jupyter Notebook](https://jupyter.org/) and [Google Colab](https://colab.research.google.com/). The author acknowledges the contributions of the original authors and sources in compiling this material.
+This lecture material is prepared by the instructor using various online resources and textbooks on machine learning and deep learning. The figures are created by the instructor using Subzone Census 2010 data with the help of [GeoPandas](https://geopandas.org/) and [Matplotlib](https://matplotlib.org/). The figures are rendered using [Jupyter Notebook](https://jupyter.org/) and [Google Colab](https://colab.research.google.com/). The instructor acknowledges the contributions of the original authors and sources in compiling this material.
 
-[Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the author. [Gemini](https://gemini.github.com) has been used within Google Colab to generate the code snippets based on the input provided by the author. The final content has been reviewed and edited by the instructor.
+[Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the instructor. [Gemini](https://gemini.github.com) has been used within Google Colab to generate the code snippets based on the input provided by the instructor. The final content has been reviewed and edited by the instructor.
 
-This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the author directly.
+This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the instructor directly.
 
 <span style="font-size:small">**Content available online at [VandVAIProducts.github.io/intro-to-supervised-ml](https://vandvaiproducts.github.io/intro-to-supervised-ml)**.</span>
   

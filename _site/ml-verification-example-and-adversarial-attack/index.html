@@ -15,7 +15,7 @@
   <meta name="author" content="Mansur Arief">
   
 
-  <meta name="description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+  <meta name="description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the high-level concept of verification for machine learning models. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we consider a...">
 
   
 
@@ -82,7 +82,7 @@
   
   <meta property="og:site_name" content="Verification and Validation for AI Products">
   <meta property="og:title" content="Verification and Validation for AI Products">
-  <meta property="og:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+  <meta property="og:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the high-level concept of verification for machine learning models. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we consider a...">
 
   
 
@@ -99,7 +99,7 @@
   <meta name="twitter:creator" content="@">
 
   <meta property="twitter:title" content="Verification and Validation for AI Products">
-  <meta property="twitter:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...">
+  <meta property="twitter:description" content="### Machine Learning Verification Example and Adversarial Attacks We will review the high-level concept of verification for machine learning models. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we consider a...">
 
   
 
@@ -112,7 +112,7 @@
         "@context": "http://schema.org",
         "@type": "WebPage",
         "headline": "Verification and Validation for AI Products",
-        "description": "### Machine Learning Verification Example and Adversarial Attacks We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we...",
+        "description": "### Machine Learning Verification Example and Adversarial Attacks We will review the high-level concept of verification for machine learning models. This brief will cover input-output specifications, adversarial examples, and adversarial attacks. For the purpose of this brief, we consider a...",
         "image": "http://localhost:4000/",
         "url": "http://localhost:4000/ml-verification-example-and-adversarial-attack/"
       }
@@ -196,7 +196,7 @@
 
 <h3 id="machine-learning-verification-example-and-adversarial-attacks">Machine Learning Verification Example and Adversarial Attacks</h3>
 
-<p>We will review the concept of verification for machine learning models in high-level terms. This brief will cover input-output specifications, adversarial examples, and adversarial attacks.</p>
+<p>We will review the high-level concept of verification for machine learning models. This brief will cover input-output specifications, adversarial examples, and adversarial attacks.</p>
 
 <p>For the purpose of this brief, we consider a ML model simply a mapping from inputs to outputs.</p>
 
@@ -231,22 +231,19 @@ Recall again our classification example in <a href="/intro-to-supervised-ml.md">
 <img src="/assets/img/failed-input-output-specs-decision-boundary.png" alt="Failed Input-Output Specification Example" style="width: 100%; max-width: 600px; display: block;" />
 <span style="font-size:small"><strong>Fig. 4:</strong> The trained model fails the input-output specifications. The model fails to cover the top part of the map, where most of the points should be labeled <code class="language-plaintext highlighter-rouge">0</code>, but are labeled <code class="language-plaintext highlighter-rouge">1</code> by the model.</span></p>
 
-<h4 id="adversarial-examples">Adversarial Examples</h4>
+<h3 id="adversarial-examples">Adversarial Examples</h3>
 
 <p>In the previous example, we use a simple input-output specification that only checks for the consistency of the model output with the expected output. In practice, the specification can be more complex and involve multiple inputs and outputs. The key idea is to have a formal way to express the expected behavior of the model.</p>
 
-<p>Also, in this example, we can easily visualize the prediction of the model and compare it with the expected output since we are working in a 2D space. Imagine, however, if the input space is high-dimensional (such as images or texts), then the specification can be more complex and harder to visualize. An example of this is the adversarial examples, where a small perturbation in the input space can cause the model to misclassify the input. A famous example is this panda image that is classified as a gibbon by the model when a small carefully-optimized noise is added to the image.</p>
+<p>Also, in this example, we can easily visualize the prediction of the model and compare it with the expected output since we are working in a 2D space. Imagine, however, if the input space is high-dimensional (such as images or texts), then the specification can be more complex and harder to visualize. An example of this is the adversarial examples, where a small perturbation in the input space can cause the model to misclassify the input. <em>Adversarial examples</em> are inputs to ML models that are intentionally designed to cause the model to make a mistake. These examples are generated by adding small perturbations to the input data with the intention of amplifying the loss and errors in the model prediction, hence leading to misclassifications. A famous example is this panda image that is classified as a gibbon by the model when a small carefully-optimized noise is added to the image.
+<img src="/assets/img/adversarial_img_example_openAI.webp" alt="Adversarial Example for Image Classification" style="width: 100%; max-width: 600px; display: block;" />
+<span style="font-size:small"><strong>Fig. 5:</strong> Adversarial example for image classification. The panda image is classified as a gibbon by the model when an imperceptible adversarial perturbation is added to the image. Source: <a href="https://openai.com/index/attacking-machine-learning-with-adversarial-examples/">OpenAI blog</a>.</span></p>
 
-<p><img src="/assets/img/adversarial_img_example_openAI.webp" alt="Adversarial Example for Image Classification" style="width: 100%; max-width: 600px; display: block;" />
-<span style="font-size:small"><strong>Fig. 4:</strong> Adversarial example for image classification. The panda image is classified as a gibbon by the model when an imperceptible adversarial perturbation is added to the image. Source: <a href="https://openai.com/index/attacking-machine-learning-with-adversarial-examples/">OpenAI blog</a>.</span></p>
-
-<p>In this example, the model fails the input-output specification because the model is not robust to adversarial examples. This is a common problem in ML models, where the model is not robust to small perturbations in the input space.</p>
-
-<p><em>Adversarial examples</em> are inputs to ML models that are intentionally designed to cause the model to make a mistake. These examples are generated by adding small perturbations to the input data that are imperceptible to humans but can cause the model to misclassify the input. The process of generating adversarial examples is called <em>adversarial attack</em>.</p>
+<p>In this example, the model fails the input-output specification because the model is not robust to adversarial examples. The process of generating adversarial examples is called <em>adversarial attack</em>.</p>
 
 <h3 id="adversarial-attacks">Adversarial Attacks</h3>
 
-<p>Currently, there are many adversarial attacks that can fool ML models. These attacks can be used to evaluate the robustness of ML models and improve their security. Consider the following example of an adversarial attack on <code class="language-plaintext highlighter-rouge">resnet</code> model using <code class="language-plaintext highlighter-rouge">foolbox</code> library.</p>
+<p>There are many adversarial attacks that can fool ML models. These attacks can be used to verify the robustness of ML models to adversarial perturbation, up to a certain radius $\epsilon$. Consider the following example of an adversarial attack on <code class="language-plaintext highlighter-rouge">resnet</code> model using <code class="language-plaintext highlighter-rouge">foolbox</code> library.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">foolbox</span> <span class="k">as</span> <span class="n">fb</span>
 
@@ -257,7 +254,7 @@ Recall again our classification example in <a href="/intro-to-supervised-ml.md">
 <p>Preproces an input image and get the model’s prediction.</p>
 
 <p><img src="/assets/img/merlion.jpg" alt="Merlion Image" style="width: 100%; max-width: 600px; display: block;" />
-<span style="font-size:small"><strong>Fig. 5:</strong> The Merlion image. Source: <a href="https://en.wikipedia.org/wiki/Merlion_Park">Wikipedia</a>.</span></p>
+<span style="font-size:small"><strong>Fig. 6:</strong> The Merlion image. Source: <a href="https://en.wikipedia.org/wiki/Merlion_Park">Wikipedia</a>.</span></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get the imagenet class names
 </span><span class="n">classes</span> <span class="o">=</span> <span class="n">fb</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">imagenet_labels</span><span class="p">()</span>
@@ -299,17 +296,17 @@ Recall again our classification example in <a href="/intro-to-supervised-ml.md">
 <p>The model now predicts the adversarial example as <code class="language-plaintext highlighter-rouge">shower curtain</code>. This is an example of an adversarial attack that can fool the model to misclassify the input. Let’s see the adversarial example, original image, and the perturbation.</p>
 
 <p><img src="/assets/img/merlion-adversarial-example.png" alt="Merlion Adversarial Example" style="width: 100%; max-width: 800px; display: block;" />
-<span style="font-size:small"><strong>Fig. 6:</strong> The adversarial example of the Merlion image (left, predicted as <code class="language-plaintext highlighter-rouge">shower curtain</code>), the original image (middle, predicted as <code class="language-plaintext highlighter-rouge">fountain</code>), and the perturbation (right).</span></p>
+<span style="font-size:small"><strong>Fig. 7:</strong> The adversarial example of the Merlion image (left, predicted as <code class="language-plaintext highlighter-rouge">shower curtain</code>), the original image (middle, predicted as <code class="language-plaintext highlighter-rouge">fountain</code>), and the perturbation (right).</span></p>
 
 <p>Note again that the perturbation is imperceptible to humans but can cause the model to misclassify the input. Similar to the previous example, the model fails the input-output specifications because the model is not robust (particularly to adversarial examples). See the <a href="https://foolbox.readthedocs.io/en/stable/">foolbox documentation</a> for more details on adversarial attacks and defenses.</p>
 
 <h3 id="acknowledgment">Acknowledgment</h3>
 
-<p>This lecture material is created by the instructor based on the author’s knowledge and experience in machine learning and verification and validation. It uses mostly open-source materials and tools, such as Python, PyTorch, and <code class="language-plaintext highlighter-rouge">foolbox</code> Python package. The author would like to acknowledge the creators and contributors of these tools and materials for making them available to the public.</p>
+<p>This lecture material is created by the instructor based on the instructor’s knowledge and experience in machine learning and verification and validation. It uses mostly open-source materials and tools, such as Python, PyTorch, and <code class="language-plaintext highlighter-rouge">foolbox</code> Python package. The instructor would like to acknowledge the creators and contributors of these tools and materials for making them available to the public.</p>
 
-<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the author. The author has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.</p>
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the instructor. The instructor has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.</p>
 
-<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://www.mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the author directly.</p>
+<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the instructor directly.</p>
 
 <p><span style="font-size:small"><strong>Content available online at <a href="https://vandvaiproducts.github.io/ml-verification-example-and-adversarial-attack">VandVAIProducts.github.io/ml-verification-example-and-adversarial-attack</a></strong>.</span></p>
 

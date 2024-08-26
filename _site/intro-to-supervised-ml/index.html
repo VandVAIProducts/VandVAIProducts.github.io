@@ -15,7 +15,7 @@
   <meta name="author" content="Mansur Arief">
   
 
-  <meta name="description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
+  <meta name="description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. A high-level overview of supervised machine learning 2. Example: Predicting whether a point is inside a target region (Singapore islands) 3. Preparing...">
 
   
 
@@ -82,7 +82,7 @@
   
   <meta property="og:site_name" content="Verification and Validation for AI Products">
   <meta property="og:title" content="Verification and Validation for AI Products">
-  <meta property="og:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
+  <meta property="og:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. A high-level overview of supervised machine learning 2. Example: Predicting whether a point is inside a target region (Singapore islands) 3. Preparing...">
 
   
 
@@ -99,7 +99,7 @@
   <meta name="twitter:creator" content="@">
 
   <meta property="twitter:title" content="Verification and Validation for AI Products">
-  <meta property="twitter:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...">
+  <meta property="twitter:description" content="### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. A high-level overview of supervised machine learning 2. Example: Predicting whether a point is inside a target region (Singapore islands) 3. Preparing...">
 
   
 
@@ -112,7 +112,7 @@
         "@context": "http://schema.org",
         "@type": "WebPage",
         "headline": "Verification and Validation for AI Products",
-        "description": "### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. **A high-level overview of supervised machine learning** 2. **Example: Predicting whether a point is inside a target region (Singapore islands)** 3. **Preparing...",
+        "description": "### Intro to Supervised Machine Learning (ML) Models We will cover the following topics in this brief: 1. A high-level overview of supervised machine learning 2. Example: Predicting whether a point is inside a target region (Singapore islands) 3. Preparing...",
         "image": "http://localhost:4000/",
         "url": "http://localhost:4000/intro-to-supervised-ml/"
       }
@@ -199,18 +199,18 @@
 <p>We will cover the following topics in this brief:</p>
 
 <ol>
-  <li><strong>A high-level overview of supervised machine learning</strong></li>
-  <li><strong>Example: Predicting whether a point is inside a target region (Singapore islands)</strong></li>
-  <li><strong>Preparing data for ML model training</strong></li>
-  <li><strong>Training a Deep Neural Network (DNN) model</strong></li>
-  <li><strong>Evaluating the model performance</strong></li>
+  <li>A high-level overview of supervised machine learning</li>
+  <li>Example: Predicting whether a point is inside a target region (Singapore islands)</li>
+  <li>Preparing data for ML model training</li>
+  <li>Training a Deep Neural Network (DNN) model</li>
+  <li>Evaluating the model performance</li>
 </ol>
 
 <p>Our objective is to gain a basic understanding of ML models and how to evaluate their performance. We will skip the mathematical details and focus on the concepts and practical applications necessary for the main lecture on <a href="/">Verification and Validation (V&amp;V) for ML Models</a>.</p>
 
 <h3 id="supervised-machine-learning-ml">Supervised Machine Learning (ML)</h3>
 
-<p>Supervised learning is a type of machine learning (ML) framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.</p>
+<p>Supervised learning is a type of ML framework where the model learns from labeled data. The model is trained on a dataset that includes input-output pairs. The goal is to learn a mapping function from input to output. The model can then predict the output for new, unseen data.</p>
 
 <p><strong>How does it differ from classical programming?</strong></p>
 
@@ -236,7 +236,7 @@
 
 <h3 id="preparing-data-for-training-a-ml-model">Preparing Data for Training a ML Model</h3>
 
-<p>Before training the model, we need to prepare the data. For simplicity, we will use the dataset shown in Fig. 1. Suppose the dataset is stored in a dataset <code class="language-plaintext highlighter-rouge">df</code> with three columns: <code class="language-plaintext highlighter-rouge">latitude</code>, <code class="language-plaintext highlighter-rouge">longitude</code>, and <code class="language-plaintext highlighter-rouge">label</code>. We can split the dataset into input features <code class="language-plaintext highlighter-rouge">X</code> and output labels <code class="language-plaintext highlighter-rouge">y</code> as follows.</p>
+<p>Before training the model, we need to prepare the data. For simplicity, we will use the dataset shown in Fig. 1. Suppose the dataset is stored in a dataset <code class="language-plaintext highlighter-rouge">df</code> with three columns: <code class="language-plaintext highlighter-rouge">lat</code>, <code class="language-plaintext highlighter-rouge">lon</code>, and <code class="language-plaintext highlighter-rouge">label</code>. We can split the dataset into input features <code class="language-plaintext highlighter-rouge">X</code> and output labels <code class="language-plaintext highlighter-rouge">y</code> as follows.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prepare the data
 </span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s">'lon'</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">]].</span><span class="n">values</span>
@@ -371,12 +371,12 @@
 <p><img src="/assets/img/testing-set.png" alt="Predicted Labels on Test Set" style="width: 100%; max-width: 600px; display: block;" />
 <span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 3</strong> Predicted Labels on Test Set</span></p>
 
-<p>In fact, we can visualize the decision boundary learned by the model to separate the points inside and outside the target region. The decision boundary is the line that separates the two classes in the feature space.</p>
+<p>In fact, we can visualize the decision boundary learned by the model to separate the points inside and outside the target region. The decision boundary is the line that separates the two classes in the input/feature space.</p>
 
 <p><img src="/assets/img/decision-boundary.png" alt="Decision Boundary" style="width: 100%; max-width: 600px; display: block;" />
 <span style="font-size:x-small; text-align:center; margin-left:0em;"><strong>Fig. 4</strong> Decision Boundary</span></p>
 
-<p>The decision boundary is learned by the model during training based on the patterns in the data. The model learns to classify points based on their features (latitude, longitude) and predict whether they are inside or outside the target region. To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.</p>
+<p>To make predictions on new, unseen data, the model simply calculate the output based on the learned parameters and the input features and if the output is greater than 0.5, the model predicts the point is inside the target region, otherwise outside.</p>
 
 <h3 id="summary">Summary</h3>
 
@@ -402,11 +402,11 @@
 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
-<p>This lecture material is prepared by the instructor using various online resources and textbooks on machine learning and deep learning. The figures are created by the author using Subzone Census 2010 data with the help of <a href="https://geopandas.org/">GeoPandas</a> and <a href="https://matplotlib.org/">Matplotlib</a>. The figures are rendered using <a href="https://jupyter.org/">Jupyter Notebook</a> and <a href="https://colab.research.google.com/">Google Colab</a>. The author acknowledges the contributions of the original authors and sources in compiling this material.</p>
+<p>This lecture material is prepared by the instructor using various online resources and textbooks on machine learning and deep learning. The figures are created by the instructor using Subzone Census 2010 data with the help of <a href="https://geopandas.org/">GeoPandas</a> and <a href="https://matplotlib.org/">Matplotlib</a>. The figures are rendered using <a href="https://jupyter.org/">Jupyter Notebook</a> and <a href="https://colab.research.google.com/">Google Colab</a>. The instructor acknowledges the contributions of the original authors and sources in compiling this material.</p>
 
-<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the author. <a href="https://gemini.github.com">Gemini</a> has been used within Google Colab to generate the code snippets based on the input provided by the author. The final content has been reviewed and edited by the instructor.</p>
+<p><a href="https://copilot.github.com">Copilot</a> has been used to generate the text snippets and terminologies based on the input provided by the instructor. <a href="https://gemini.github.com">Gemini</a> has been used within Google Colab to generate the code snippets based on the input provided by the instructor. The final content has been reviewed and edited by the instructor.</p>
 
-<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://www.mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the author directly.</p>
+<p>This brief is provided as a pre-reading material for the lecture on <a href="https://vandvaiproducts.github.io/">Verification and Validation (V&amp;V) for Machine Learning (ML) Models</a> by <a href="https://mansurarief.github.io">Mansur M. Arief</a>. For more information, please contact the instructor directly.</p>
 
 <p><span style="font-size:small"><strong>Content available online at <a href="https://vandvaiproducts.github.io/intro-to-supervised-ml">VandVAIProducts.github.io/intro-to-supervised-ml</a></strong>.</span></p>
 

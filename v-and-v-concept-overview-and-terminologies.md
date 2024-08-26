@@ -16,7 +16,7 @@ tags: [Verification, Validation, Product Development, AI Products, V&V Standards
 
 The output of V&V activities is often used to inform design decisions, assess the *technological readiness level (TRL)* of the product for deployment under different *operational domains*, and *manage risks* associated with the product. V&V activities can include *analysis*, *testing*, *inspection*, and *demonstration*, depending on the nature of the product and the requirements.
 
-V&V is particularly important in the development of complex systems, where the interactions between different components can lead to unexpected behaviors or failure modes. In aerospace, automotive, medical devices, and other safety-critical industries, V&V is a standard practice to ensure the safety, reliability, and performance of the products. The success of aviation in maintaining high safety standards is often attributed to the rigorous *V&V standards* and processes followed in the development of aircraft and avionics systems (leading to, for instance, extremely low *failure rates* in commercial aviation, about 1 case in 100 million flights).
+V&V is particularly important in the development of complex systems, where the interactions between different components can lead to unexpected behaviors or failure modes. In aerospace, automotive, medical devices, and other safety-critical industries, V&V is a standard practice to ensure the safety, reliability, and performance of the products. The success of aviation in maintaining high safety standards is often attributed to the rigorous *V&V standards* and processes followed in the development of aircraft and avionics systems (leading to, for instance, extremely low *failure rates* in commercial aviation, about 1 case in 100 million flight hours).
 
 <img src="/assets/img/ai-products-example.png" alt="AI Products Example" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">
 <span style="font-size:x-small; text-align:center; margin-left:0em;">**Fig. 2** Example of AI Products across Different Domains.</span>
@@ -79,11 +79,11 @@ In the context of *AI products*, especially those that involve *machine learning
 
 ### Acknowledgment
 
-This lecture material is adapted from the [NASA Systems Engineering Handbook](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf), Chapter 5.3 and 5.4. The figures are created by the author using materials from various sources. The terminologies are compiled from various online resources and textbooks on systems engineering, V&V, and machine learning. The author acknowledges the contributions of the original authors and sources in compiling this material.
+This lecture material is adapted from the [NASA Systems Engineering Handbook](https://soma.larc.nasa.gov/mmx/pdf_files/NASA-SP-2007-6105-Rev-1-Final-31Dec2007.pdf), Chapter 5.3 and 5.4. The figures are created by the instructor using materials from various sources. The terminologies are compiled from various online resources and textbooks on systems engineering, V&V, and machine learning. The instructor acknowledges the contributions of the original authors and sources in compiling this material.
 
-[Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the author. The author has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.
+[Copilot](https://copilot.github.com) has been used to generate the text snippets and terminologies based on the input provided by the instructor. The instructor has reviewed and edited the generated text to ensure accuracy and relevance to the lecture content.
 
-This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the author directly.
+This brief is provided as a pre-reading material for the lecture on [Verification and Validation (V&V) for Machine Learning (ML) Models](https://vandvaiproducts.github.io/) by [Mansur M. Arief](https://mansurarief.github.io). For more information, please contact the instructor directly.
 
 <span style="font-size:small">**Content available online at [VandVAIProducts.github.io/v-and-v-concept-overview-and-terminologies](https://vandvaiproducts.github.io/v-and-v-concept-overview-and-terminologies)**.</span>
   
